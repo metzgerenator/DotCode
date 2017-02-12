@@ -341,7 +341,7 @@ struct CurrentUser  {
         
         
         let storage = FIRStorage.storage()
-        let storageRef = storage.reference(forURL: "gs://objective-c-7392d.appspot.com").child("userimages")
+        let storageRef = storage.reference(forURL: "gs://dotcode-f2137.appspot.com").child("userimages")
         
         var imageURLS = [String]()
         for image in images {

@@ -99,7 +99,16 @@ class SkilsAndAvailabilityViewController: UIViewController {
                 self.userProjects.insert(cellOne, at: 0)
                 //MARK: reload collection view here
                 self.collectionView.reloadData()
-            }
+                
+            } else if self.userProjects.count == 0 {
+                    
+                    self.userProjects.insert(cellOne, at: 0)
+                    self.collectionView.reloadData()
+                    
+                    
+                }
+                
+            
             
             
             

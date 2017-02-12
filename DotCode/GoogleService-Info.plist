@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>559855572054-a1blcthueujnlthn7ga9csii44qpcccd.apps.googleusercontent.com</string>
+	<string>550477963791-jcmls0ej3cpn0q3a2dqrifglh0lf9cn5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.559855572054-a1blcthueujnlthn7ga9csii44qpcccd</string>
+	<string>com.googleusercontent.apps.550477963791-jcmls0ej3cpn0q3a2dqrifglh0lf9cn5</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD6K6XR1Ly8x55uUTgQLtvYVT_vX2F8GOw</string>
+	<string>AIzaSyB7JqbhaxsS_boA4TpPGmVthsuwm4TBNx4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>559855572054</string>
+	<string>550477963791</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.metzger.ObjectiveCApp</string>
+	<string>co.DotCode</string>
 	<key>PROJECT_ID</key>
-	<string>objective-c-7392d</string>
+	<string>dotcode-f2137</string>
 	<key>STORAGE_BUCKET</key>
-	<string>objective-c-7392d.appspot.com</string>
+	<string>dotcode-f2137.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:559855572054:ios:d5ad934942a22478</string>
+	<string>1:550477963791:ios:6ae708d29c3bcc16</string>
 	<key>DATABASE_URL</key>
-	<string>https://objective-c-7392d.firebaseio.com</string>
+	<string>https://dotcode-f2137.firebaseio.com</string>
 </dict>
 </plist>

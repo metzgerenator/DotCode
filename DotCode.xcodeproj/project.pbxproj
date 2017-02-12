@@ -12,7 +12,6 @@
 		5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7F01E4FFB4900A6EBFC /* ViewController.swift */; };
 		5722C7F61E4FFB4900A6EBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5722C7F51E4FFB4900A6EBFC /* Assets.xcassets */; };
 		5722C7F91E4FFB4900A6EBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5722C7F71E4FFB4900A6EBFC /* LaunchScreen.storyboard */; };
-		5722C8011E4FFB8700A6EBFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5722C8001E4FFB8700A6EBFC /* GoogleService-Info.plist */; };
 		5722C8031E4FFBA100A6EBFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5722C8021E4FFBA100A6EBFC /* Main.storyboard */; };
 		5722C8071E50000F00A6EBFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C8051E50000F00A6EBFC /* LoginViewController.swift */; };
 		5722C8081E50000F00A6EBFC /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C8061E50000F00A6EBFC /* Users.swift */; };
@@ -33,6 +32,9 @@
 		5722C8311E50036900A6EBFC /* SkilsAndAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C82E1E50036900A6EBFC /* SkilsAndAvailabilityViewController.swift */; };
 		5722C8321E50036900A6EBFC /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C82F1E50036900A6EBFC /* DescriptionViewController.swift */; };
 		5722C8331E50036900A6EBFC /* SkillsAndAvailabilityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C8301E50036900A6EBFC /* SkillsAndAvailabilityCollectionViewCell.swift */; };
+		5755FFB91E50FFDF00A2E1A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5755FFB81E50FFDF00A2E1A6 /* GoogleService-Info.plist */; };
+		5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFBB1E51038600A2E1A6 /* SubSkillsTableViewController.swift */; };
+		5755FFBE1E51038600A2E1A6 /* SubSkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +46,6 @@
 		5722C7F51E4FFB4900A6EBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5722C7F81E4FFB4900A6EBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5722C7FA1E4FFB4900A6EBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5722C8001E4FFB8700A6EBFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5722C8021E4FFBA100A6EBFC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5722C8051E50000F00A6EBFC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5722C8061E50000F00A6EBFC /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		5722C82E1E50036900A6EBFC /* SkilsAndAvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkilsAndAvailabilityViewController.swift; sourceTree = "<group>"; };
 		5722C82F1E50036900A6EBFC /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		5722C8301E50036900A6EBFC /* SkillsAndAvailabilityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsAndAvailabilityCollectionViewCell.swift; sourceTree = "<group>"; };
+		5755FFB81E50FFDF00A2E1A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5755FFBB1E51038600A2E1A6 /* SubSkillsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSkillsTableViewController.swift; sourceTree = "<group>"; };
+		5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSkillsTableViewCell.swift; sourceTree = "<group>"; };
 		8E4A76FE64DBD8145033E29C /* Pods-DotCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +113,7 @@
 				5722C8021E4FFBA100A6EBFC /* Main.storyboard */,
 				5722C7F71E4FFB4900A6EBFC /* LaunchScreen.storyboard */,
 				5722C7FA1E4FFB4900A6EBFC /* Info.plist */,
-				5722C8001E4FFB8700A6EBFC /* GoogleService-Info.plist */,
+				5755FFB81E50FFDF00A2E1A6 /* GoogleService-Info.plist */,
 			);
 			path = DotCode;
 			sourceTree = "<group>";
@@ -194,6 +198,7 @@
 		5722C8261E50034400A6EBFC /* Sub Skills */ = {
 			isa = PBXGroup;
 			children = (
+				5755FFBA1E51036F00A2E1A6 /* Sub Skills */,
 				5722C8271E50035600A6EBFC /* EditSkillsTableViewController.swift */,
 				5722C8281E50035600A6EBFC /* EditSkillsTableViewCell.swift */,
 				5722C8291E50035600A6EBFC /* skillsStruct.swift */,
@@ -209,6 +214,15 @@
 				5722C8301E50036900A6EBFC /* SkillsAndAvailabilityCollectionViewCell.swift */,
 			);
 			name = "additional details";
+			sourceTree = "<group>";
+		};
+		5755FFBA1E51036F00A2E1A6 /* Sub Skills */ = {
+			isa = PBXGroup;
+			children = (
+				5755FFBB1E51038600A2E1A6 /* SubSkillsTableViewController.swift */,
+				5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */,
+			);
+			name = "Sub Skills";
 			sourceTree = "<group>";
 		};
 		D9E10B475D703E0463477A8C /* Frameworks */ = {
@@ -292,7 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5722C7F91E4FFB4900A6EBFC /* LaunchScreen.storyboard in Resources */,
-				5722C8011E4FFB8700A6EBFC /* GoogleService-Info.plist in Resources */,
+				5755FFB91E50FFDF00A2E1A6 /* GoogleService-Info.plist in Resources */,
 				5722C7F61E4FFB4900A6EBFC /* Assets.xcassets in Resources */,
 				5722C8031E4FFBA100A6EBFC /* Main.storyboard in Resources */,
 			);
@@ -353,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */,
 				5722C8151E50028F00A6EBFC /* GenericAccountCreateViewController.swift in Sources */,
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
@@ -372,6 +387,7 @@
 				5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */,
 				5722C80D1E5001AD00A6EBFC /* schemaConstants.swift in Sources */,
 				5722C7EF1E4FFB4900A6EBFC /* AppDelegate.swift in Sources */,
+				5755FFBE1E51038600A2E1A6 /* SubSkillsTableViewCell.swift in Sources */,
 				5722C8331E50036900A6EBFC /* SkillsAndAvailabilityCollectionViewCell.swift in Sources */,
 				5722C81F1E50030600A6EBFC /* UploadPhotoViewController.swift in Sources */,
 			);

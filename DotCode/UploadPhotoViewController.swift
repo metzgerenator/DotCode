@@ -74,7 +74,7 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
         
        
         storage = FIRStorage.storage()
-         storageRef = storage?.reference(forURL: "gs://objective-c-7392d.appspot.com").child("userimages")
+         storageRef = storage?.reference(forURL: "gs://dotcode-f2137.appspot.com").child("userimages")
         
         
         // Do any additional setup after loading the view.
