@@ -33,6 +33,7 @@ let USERIMAGE = "user image"
 let USERPROJECTS = "project_portfolio"
 let PROJECTDESCRIPTION = "Description"
 let PROJECTURLS = "URLS"
+let DEVELOPERSKILLS = "developer_skills"
 
 
 

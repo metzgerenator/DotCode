@@ -89,13 +89,15 @@ struct Developer {
     
     
     var developerDescription: String?
-    
+
     
     var previousClients: [String]?
     
     var userPhoto: String?
     
     var projects: [DeveloperProjects]?
+    
+    var developerSkills: [Skills]?
     
     init() {
         
@@ -106,6 +108,17 @@ struct Developer {
     
     init(userdata: [String : AnyObject])  {
         
+        if let devSkills = userdata[DEVELOPERSKILLS] {
+            
+            
+            
+            for (headSkill, subSkill) in devSkills as! Dictionary<String, AnyObject> {
+                
+                print("head \(headSkill), sub \(subSkill)")
+            
+        }
+            
+        }
         
         if let previousClients = userdata[PREVIOUSCLIENTS] {
             
@@ -466,9 +479,13 @@ struct DeveloperProjects {
     var projectName: String
     var pictures: [String]
     var descritpion: String?
+  
+}
+
+struct Skills {
     
-    
-    
+    var headerSkill: String
+    var subSkills: [String]?
     
 }
 
