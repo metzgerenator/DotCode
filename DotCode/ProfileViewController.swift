@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var DeveloperName: UIStackView!
+    @IBOutlet weak var DeveloperName: UILabel!
     
     @IBOutlet weak var City: UILabel!
     
@@ -30,8 +30,48 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentUser  = CurrentUser()
+        currentUser.userAttributes { (Developer) in
+            
+            //MARK: fix conflict here
+            if let name = Developer.userName {
+                
+                self.DeveloperName.text = name
+            
+            }
+            
+            if let companyName = Developer.companyName {
+                
+                 self.DeveloperName.text = companyName
+            }
+            
+            
+            if let location = Developer.location {
+                
+                self.City.text = location
+            }
+            
+            
+            if let description = Developer.developerDescription {
+                
+                self.aboutMe.text = description
+                
+            }
+            
+            if let website = Developer.website {
+                
+                self.website.text = website
+            }
+            
+            
+            
+            
+            
+            
+        }
+        
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

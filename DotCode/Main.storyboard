@@ -247,7 +247,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="9g1-uF-5q2"/>
                     <connections>
                         <outlet property="City" destination="Edv-Ke-5cZ" id="Jcl-dl-1TA"/>
-                        <outlet property="DeveloperName" destination="W0d-Fn-2xF" id="Ab7-uy-r3u"/>
+                        <outlet property="DeveloperName" destination="rrN-od-oVH" id="APa-3P-cNy"/>
                         <outlet property="aboutMe" destination="y4O-2x-13H" id="16r-lI-RTj"/>
                         <outlet property="profileImage" destination="1SC-Gz-xfF" id="YHh-Sr-Xsn"/>
                         <outlet property="skillsContainer" destination="90U-tJ-5rV" id="bcn-vF-0w4"/>
