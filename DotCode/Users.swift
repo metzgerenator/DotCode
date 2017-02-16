@@ -110,15 +110,27 @@ struct Developer {
         
         if let devSkills = userdata[DEVELOPERSKILLS] {
             
-            
+            var developerSkillsArray = [Skills]()
             
             for (headSkill, subSkill) in devSkills as! Dictionary<String, AnyObject> {
                 
-                print("head \(headSkill), sub \(subSkill)")
-            
+                let headerSkill = headSkill
+                var subSkillArray = [String]()
+                
+                for skill in subSkill as! NSMutableArray {
+                    
+                    subSkillArray.append(skill as! String)
+                    
+                }
+                
+                let finalSkill = Skills(headerSkill: headerSkill, subSkills: subSkillArray)
+                developerSkillsArray.append(finalSkill)
+                
+            }
+            self.developerSkills = developerSkillsArray
         }
-            
-        }
+        
+        
         
         if let previousClients = userdata[PREVIOUSCLIENTS] {
             

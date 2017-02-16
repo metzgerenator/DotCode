@@ -65,6 +65,10 @@ class ProfileViewController: UIViewController {
             }
             
             
+            if let developerSkills = Developer.developerSkills {
+                
+                
+            }
             
             
             
