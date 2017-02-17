@@ -23,7 +23,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var aboutMe: UILabel!
     
     
-    @IBOutlet weak var skillsContainer: UIView!
+    
+    @IBOutlet weak var skillStackView: UIStackView!
+    
     
     
     
@@ -67,7 +69,15 @@ class ProfileViewController: UIViewController {
             
             if let developerSkills = Developer.developerSkills {
                 
-                
+                for skill in developerSkills {
+                    
+                    let label  = UILabel()
+                   label.frame = CGRectFromString(skill.headerSkill)
+                    label.text = skill.headerSkill
+                    print("label to add \(skill.headerSkill)")
+                    self.skillStackView.addSubview(label)
+                    
+                }
             }
             
             
