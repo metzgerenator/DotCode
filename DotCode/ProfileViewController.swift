@@ -24,7 +24,8 @@ class ProfileViewController: UIViewController {
     
     
     
-    @IBOutlet weak var skillStackView: UIStackView!
+    @IBOutlet weak var collectionView: UICollectionView!
+
     
     
     
@@ -75,7 +76,6 @@ class ProfileViewController: UIViewController {
                    label.frame = CGRectFromString(skill.headerSkill)
                     label.text = skill.headerSkill
                     print("label to add \(skill.headerSkill)")
-                    self.skillStackView.addSubview(label)
                     
                 }
             }
@@ -105,3 +105,37 @@ class ProfileViewController: UIViewController {
     */
 
 }
+
+
+
+extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProfileVidwCollectionViewCell
+        
+        
+        return cell
+        
+    }
+    
+    
+}
+
+
+
+
+
+
+
+

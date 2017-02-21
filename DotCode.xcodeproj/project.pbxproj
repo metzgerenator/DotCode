@@ -36,6 +36,7 @@
 		5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFBB1E51038600A2E1A6 /* SubSkillsTableViewController.swift */; };
 		5755FFBE1E51038600A2E1A6 /* SubSkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */; };
 		5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */; };
+		57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		5755FFBB1E51038600A2E1A6 /* SubSkillsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSkillsTableViewController.swift; sourceTree = "<group>"; };
 		5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSkillsTableViewCell.swift; sourceTree = "<group>"; };
 		5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVidwCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E4A76FE64DBD8145033E29C /* Pods-DotCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */,
+				57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */,
 			);
 			name = "main nav Developer";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
 				5722C8231E50032700A6EBFC /* PreviousClientTableViewCell.swift in Sources */,
 				5722C8241E50032700A6EBFC /* PreviousClientsViewController.swift in Sources */,
+				57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */,
 				5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */,
 				5722C82A1E50035600A6EBFC /* EditSkillsTableViewController.swift in Sources */,
 				5722C80B1E50017A00A6EBFC /* Constants.swift in Sources */,
