@@ -250,6 +250,9 @@
                                                     <constraint firstItem="wnY-fw-rOp" firstAttribute="top" secondItem="QqC-XR-3WF" secondAttribute="top" id="eqw-tS-5dA"/>
                                                     <constraint firstAttribute="bottom" secondItem="wnY-fw-rOp" secondAttribute="bottom" id="lzj-ce-VGf"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="skillLabel" destination="wnY-fw-rOp" id="Pm0-FZ-8TL"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>

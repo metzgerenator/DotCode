@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     
-    
+    var headerSkills = [String]()
     
     
     
@@ -72,12 +72,11 @@ class ProfileViewController: UIViewController {
                 
                 for skill in developerSkills {
                     
-                    let label  = UILabel()
-                   label.frame = CGRectFromString(skill.headerSkill)
-                    label.text = skill.headerSkill
-                    print("label to add \(skill.headerSkill)")
-                    
+                    self.headerSkills.append(skill.headerSkill)
                 }
+                
+                self.collectionView.reloadData()
+                
             }
             
             
@@ -117,13 +116,16 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return headerSkills.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProfileVidwCollectionViewCell
         
+        let skillToConfigure = headerSkills[indexPath.row]
+        
+        cell.configureCell(skill: skillToConfigure)
         
         return cell
         

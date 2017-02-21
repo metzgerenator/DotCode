@@ -12,6 +12,18 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
     
     
     
+    @IBOutlet weak var skillLabel: UILabel!
+    
+    
+    
+    func configureCell(skill: String) {
+        
+        
+        skillLabel.text = skill
+    
+        
+    }
+    
     
     
     
