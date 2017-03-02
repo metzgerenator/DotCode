@@ -16,10 +16,15 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
     
     
     
+    
     func configureCell(skill: String) {
         
         
         skillLabel.text = skill
+       // skillLabel.setFullBorder(borderColor: .blue)
+   
+        self.layer.cornerRadius = 26
+        self.layer.masksToBounds = true
     
         
     }
