@@ -37,6 +37,8 @@
 		5755FFBE1E51038600A2E1A6 /* SubSkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */; };
 		5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */; };
 		57AA421D1E68F113004476E5 /* ProfileViewCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA421C1E68F113004476E5 /* ProfileViewCollectionReusableView.swift */; };
+		57AA42201E6902C1004476E5 /* WelcomScreenStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA421F1E6902C1004476E5 /* WelcomScreenStepController.swift */; };
+		57AA42221E6902C3004476E5 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA42211E6902C3004476E5 /* WelcomeScreenViewController.swift */; };
 		57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		5755FFBC1E51038600A2E1A6 /* SubSkillsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSkillsTableViewCell.swift; sourceTree = "<group>"; };
 		5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		57AA421C1E68F113004476E5 /* ProfileViewCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCollectionReusableView.swift; sourceTree = "<group>"; };
+		57AA421F1E6902C1004476E5 /* WelcomScreenStepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomScreenStepController.swift; sourceTree = "<group>"; };
+		57AA42211E6902C3004476E5 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVidwCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E4A76FE64DBD8145033E29C /* Pods-DotCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,7 @@
 		5722C7ED1E4FFB4900A6EBFC /* DotCode */ = {
 			isa = PBXGroup;
 			children = (
+				57AA421E1E6902AD004476E5 /* WelcomScreen */,
 				5755FFBF1E528E8200A2E1A6 /* main nav Developer */,
 				5722C80E1E50022100A6EBFC /* createAccount */,
 				5722C8091E50017100A6EBFC /* Constants */,
@@ -240,6 +245,15 @@
 				57AA421C1E68F113004476E5 /* ProfileViewCollectionReusableView.swift */,
 			);
 			name = "main nav Developer";
+			sourceTree = "<group>";
+		};
+		57AA421E1E6902AD004476E5 /* WelcomScreen */ = {
+			isa = PBXGroup;
+			children = (
+				57AA42211E6902C3004476E5 /* WelcomeScreenViewController.swift */,
+				57AA421F1E6902C1004476E5 /* WelcomScreenStepController.swift */,
+			);
+			name = WelcomScreen;
 			sourceTree = "<group>";
 		};
 		D9E10B475D703E0463477A8C /* Frameworks */ = {
@@ -389,12 +403,14 @@
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
 				5722C8231E50032700A6EBFC /* PreviousClientTableViewCell.swift in Sources */,
+				57AA42221E6902C3004476E5 /* WelcomeScreenViewController.swift in Sources */,
 				5722C8241E50032700A6EBFC /* PreviousClientsViewController.swift in Sources */,
 				57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */,
 				5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */,
 				5722C82A1E50035600A6EBFC /* EditSkillsTableViewController.swift in Sources */,
 				5722C80B1E50017A00A6EBFC /* Constants.swift in Sources */,
 				5722C8141E50028F00A6EBFC /* TypeSelectViewController.swift in Sources */,
+				57AA42201E6902C1004476E5 /* WelcomScreenStepController.swift in Sources */,
 				5722C8311E50036900A6EBFC /* SkilsAndAvailabilityViewController.swift in Sources */,
 				5722C81C1E5002E000A6EBFC /* AddPortfoliotCollectionReusableView.swift in Sources */,
 				5722C82B1E50035600A6EBFC /* EditSkillsTableViewCell.swift in Sources */,
