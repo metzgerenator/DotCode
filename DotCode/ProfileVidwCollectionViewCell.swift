@@ -40,7 +40,7 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
     
     func confirgureProjectCell(title:String, imageURL: String) {
         
-        imageOutlet.isHidden = true
+        imageOutlet.isHidden = false
         self.layer.cornerRadius = 0
         
         let storageRef = storage.reference(forURL: imageURL)
@@ -48,6 +48,7 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
         let placeholderImage = UIImage(named: "camera.jpg")
         
         let imageView: UIImageView = imageOutlet
+        skillLabel.text = title
         
         
         let downloadTask = imageView.sd_setImage(with: storageRef, placeholderImage: placeholderImage)

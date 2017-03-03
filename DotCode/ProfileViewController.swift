@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
 
     
     var headerSkills = [String]()
+    var developerProjects = [DeveloperProjects]()
     
     
     
@@ -38,6 +39,14 @@ class ProfileViewController: UIViewController {
         currentUser.userAttributes { (Developer) in
             
             //MARK: fix conflict here
+            
+            if let projects = Developer.projects {
+                
+                self.developerProjects = projects
+                self.collectionView.reloadData()
+                
+            }
+            
             if let name = Developer.userName {
                 
                 self.DeveloperName.text = name
@@ -111,23 +120,57 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return headerSkills.count
+        if section == 0 {
+            return headerSkills.count
+        } else {
+            
+            return developerProjects.count
+            
+        }
+        
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath)  as! ProfileViewCollectionReusableView
+        
+        if indexPath.section == 0 {
+            
+            sectionHeader.title = "Skills"
+        } else {
+            
+            sectionHeader.title = "Projects"
+        }
+        
+        return sectionHeader
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProfileVidwCollectionViewCell
         
-        let skillToConfigure = headerSkills[indexPath.row]
+        if indexPath.section == 0 {
+            let skillToConfigure = headerSkills[indexPath.row]
+            cell.configureCell(skill: skillToConfigure)
+            return cell
+            
+        } else {
+            
+            let project = developerProjects[indexPath.row]
+            cell.confirgureProjectCell(title: project.projectName, imageURL: project.pictures[0])
+            return cell
+            
+        }
         
-        cell.configureCell(skill: skillToConfigure)
         
-        return cell
         
     }
     
