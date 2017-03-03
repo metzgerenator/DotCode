@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorageUI
+
 
 class ProfileVidwCollectionViewCell: UICollectionViewCell {
     
@@ -15,6 +18,9 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var skillLabel: UILabel!
     
     
+    @IBOutlet weak var imageOutlet: UIImageView!
+    
+    let storage = FIRStorage.storage()
     
     
     func configureCell(skill: String) {
@@ -26,11 +32,32 @@ class ProfileVidwCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 26
         self.layer.masksToBounds = true
     
-        
+        imageOutlet.isHidden = true
     }
     
     
     
+    
+    func confirgureProjectCell(title:String, imageURL: String) {
+        
+        imageOutlet.isHidden = true
+        self.layer.cornerRadius = 0
+        
+        let storageRef = storage.reference(forURL: imageURL)
+        
+        let placeholderImage = UIImage(named: "camera.jpg")
+        
+        let imageView: UIImageView = imageOutlet
+        
+        
+        let downloadTask = imageView.sd_setImage(with: storageRef, placeholderImage: placeholderImage)
+        
+        downloadTask?.observe(.failure) { snapshot in
+            
+            print("here is status \(snapshot.error)")
+        }
+        
+    }
     
     
 }
