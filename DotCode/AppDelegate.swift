@@ -3,7 +3,7 @@
 //  DotCode
 //
 //  Created by Aileen Taboy on 2/11/17.
-//  Copyright © 2017 Mike. All rights reserved.
+//  Copyright © 2017   Mike. All rights reserved.
 //
 
 import UIKit
