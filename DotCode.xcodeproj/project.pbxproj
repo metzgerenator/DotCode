@@ -40,6 +40,10 @@
 		57AA42201E6902C1004476E5 /* WelcomScreenStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA421F1E6902C1004476E5 /* WelcomScreenStepController.swift */; };
 		57AA42221E6902C3004476E5 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA42211E6902C3004476E5 /* WelcomeScreenViewController.swift */; };
 		57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */; };
+		751179701E6FA7B6009F37F6 /* Skill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7511796F1E6FA7B6009F37F6 /* Skill.storyboard */; };
+		751179721E6FA821009F37F6 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751179711E6FA821009F37F6 /* Projects.storyboard */; };
+		751179741E6FA84D009F37F6 /* Client.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751179731E6FA84D009F37F6 /* Client.storyboard */; };
+		751179761E6FA87D009F37F6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751179751E6FA87D009F37F6 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +83,10 @@
 		57AA421F1E6902C1004476E5 /* WelcomScreenStepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomScreenStepController.swift; sourceTree = "<group>"; };
 		57AA42211E6902C3004476E5 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVidwCollectionViewCell.swift; sourceTree = "<group>"; };
+		7511796F1E6FA7B6009F37F6 /* Skill.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Skill.storyboard; sourceTree = "<group>"; };
+		751179711E6FA821009F37F6 /* Projects.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
+		751179731E6FA84D009F37F6 /* Client.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Client.storyboard; sourceTree = "<group>"; };
+		751179751E6FA87D009F37F6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8E4A76FE64DBD8145033E29C /* Pods-DotCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +131,10 @@
 				5722C7F01E4FFB4900A6EBFC /* ViewController.swift */,
 				5722C7F51E4FFB4900A6EBFC /* Assets.xcassets */,
 				5722C8021E4FFBA100A6EBFC /* Main.storyboard */,
+				751179751E6FA87D009F37F6 /* Profile.storyboard */,
+				751179731E6FA84D009F37F6 /* Client.storyboard */,
+				751179711E6FA821009F37F6 /* Projects.storyboard */,
+				7511796F1E6FA7B6009F37F6 /* Skill.storyboard */,
 				5722C7F71E4FFB4900A6EBFC /* LaunchScreen.storyboard */,
 				5722C7FA1E4FFB4900A6EBFC /* Info.plist */,
 				5755FFB81E50FFDF00A2E1A6 /* GoogleService-Info.plist */,
@@ -308,7 +320,7 @@
 				TargetAttributes = {
 					5722C7EA1E4FFB4900A6EBFC = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = K56TMNQLJF;
+						DevelopmentTeam = 98P6NEKU3G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -337,8 +349,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5722C7F91E4FFB4900A6EBFC /* LaunchScreen.storyboard in Resources */,
+				751179741E6FA84D009F37F6 /* Client.storyboard in Resources */,
+				751179761E6FA87D009F37F6 /* Profile.storyboard in Resources */,
+				751179701E6FA7B6009F37F6 /* Skill.storyboard in Resources */,
 				5755FFB91E50FFDF00A2E1A6 /* GoogleService-Info.plist in Resources */,
 				5722C7F61E4FFB4900A6EBFC /* Assets.xcassets in Resources */,
+				751179721E6FA821009F37F6 /* Projects.storyboard in Resources */,
 				5722C8031E4FFBA100A6EBFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +555,7 @@
 			baseConfigurationReference = 47A88A0D6D4AE765BF26386E /* Pods-DotCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K56TMNQLJF;
+				DEVELOPMENT_TEAM = 98P6NEKU3G;
 				INFOPLIST_FILE = DotCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.DotCode;
@@ -553,7 +569,7 @@
 			baseConfigurationReference = 8E4A76FE64DBD8145033E29C /* Pods-DotCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K56TMNQLJF;
+				DEVELOPMENT_TEAM = 98P6NEKU3G;
 				INFOPLIST_FILE = DotCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.DotCode;
