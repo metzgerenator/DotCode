@@ -40,6 +40,17 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
         present(picker, animated: true, completion: nil)
     }
     
+    @IBAction func selectFromPhotoLibrary(_ sender: UIButton) {
+        let picker  = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        
+        picker.sourceType = .photoLibrary
+        picker.modalPresentationStyle = .formSheet
+        
+        
+        present(picker, animated: true, completion: nil)
+    }
     
     @IBAction func savePhoto(_ sender: Any) {
         

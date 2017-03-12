@@ -115,7 +115,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QKS-aL-MDg" id="PGd-c0-Rr1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -801,17 +801,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RkG-tA-qal">
-                                <rect key="frame" x="160" y="599" width="94" height="60"/>
+                                <rect key="frame" x="160" y="569" width="94" height="90"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZR-H3-Yrx">
+                                        <rect key="frame" x="1" y="0.0" width="92" height="30"/>
+                                        <state key="normal" title="Photo Library"/>
+                                        <connections>
+                                            <action selector="selectFromPhotoLibrary:" destination="e8N-yI-AIQ" eventType="touchUpInside" id="41M-fZ-K50"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbK-Fg-cF5">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="94" height="30"/>
                                         <state key="normal" title="Upload Photo"/>
                                         <connections>
                                             <action selector="uploadPhoto:" destination="e8N-yI-AIQ" eventType="touchUpInside" id="6fo-ai-rCX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-IO-hSp">
-                                        <rect key="frame" x="30" y="30" width="34" height="30"/>
+                                        <rect key="frame" x="30" y="60" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="savePhoto:" destination="e8N-yI-AIQ" eventType="touchUpInside" id="5Ym-Ao-rb6"/>
