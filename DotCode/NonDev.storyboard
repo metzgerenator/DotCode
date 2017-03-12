@@ -1,31 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4T3-EK-nrU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oGS-en-r1J">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="voz-UU-i17">
+        <!--Company Size View Controller-->
+        <scene sceneID="HxN-G8-T17">
             <objects>
-                <viewController id="4T3-EK-nrU" sceneMemberID="viewController">
+                <viewController id="oGS-en-r1J" customClass="CompanySizeViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pFd-4W-36X"/>
-                        <viewControllerLayoutGuide type="bottom" id="0cv-Ry-iXm"/>
+                        <viewControllerLayoutGuide type="top" id="EOQ-Mw-gaj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mRu-7L-Wlc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KIx-V7-wSf">
+                    <view key="view" contentMode="scaleToFill" id="1k6-of-PxR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name/Company Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yu2-Fn-eJh">
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-Bu-pFg" userLabel="org size and label">
+                                <rect key="frame" x="16" y="140" width="343" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGe-OY-sAP">
+                                        <rect key="frame" x="155.5" y="0.0" width="32.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-ia-wxS" userLabel="Company Size">
+                                        <rect key="frame" x="70.5" y="25.5" width="202" height="94.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-vU-b5D" userLabel="Small Team">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="94.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-TJ-SxW">
+                                                        <rect key="frame" x="0.5" y="0.0" width="99" height="74"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="99" id="bnl-g6-kD2"/>
+                                                            <constraint firstAttribute="height" constant="74" id="hRa-yY-7ZJ"/>
+                                                        </constraints>
+                                                        <state key="normal" image="camera"/>
+                                                        <connections>
+                                                            <action selector="SmallTeam:" destination="oGS-en-r1J" eventType="touchUpInside" id="h45-Sn-VGB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-Wv-5rE">
+                                                        <rect key="frame" x="0.0" y="74" width="100" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yud-xa-Rgw" userLabel="Dev Shop">
+                                                <rect key="frame" x="103" y="0.0" width="99" height="94.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-cr-ZQ2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="99" height="74"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="99" id="MXC-UX-gEK"/>
+                                                            <constraint firstAttribute="height" constant="74" id="c6V-FT-3gB"/>
+                                                        </constraints>
+                                                        <state key="normal" image="camera"/>
+                                                        <connections>
+                                                            <action selector="DevShop:" destination="oGS-en-r1J" eventType="touchUpInside" id="ywL-Uh-5jf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-rG-zP4">
+                                                        <rect key="frame" x="13" y="74" width="73" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewo-V3-xOc">
+                                <rect key="frame" x="140" y="617" width="95" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="rV1-cJ-B3w"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="oGS-en-r1J" eventType="touchUpInside" id="MND-l1-fhi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rnw-uh-p9K" userLabel="company info">
+                                <rect key="frame" x="16" y="410" width="343" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSw-p8-Yyv">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNM-dR-hPa">
+                                        <rect key="frame" x="0.0" y="60" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-Jc-req">
+                                        <rect key="frame" x="0.0" y="120" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yu2-Fn-eJh" firstAttribute="trailing" secondItem="1k6-of-PxR" secondAttribute="trailingMargin" id="0hF-O1-j5v"/>
+                            <constraint firstItem="H3F-Bu-pFg" firstAttribute="top" secondItem="Yu2-Fn-eJh" secondAttribute="bottom" constant="70" id="GhS-pK-Cs2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rnw-uh-p9K" secondAttribute="trailing" id="NWL-zn-W0z"/>
+                            <constraint firstItem="Yu2-Fn-eJh" firstAttribute="top" secondItem="EOQ-Mw-gaj" secondAttribute="bottom" constant="20" id="Qsd-QE-Q5G"/>
+                            <constraint firstItem="H3F-Bu-pFg" firstAttribute="leading" secondItem="1k6-of-PxR" secondAttribute="leadingMargin" id="Wf0-p7-W5Z"/>
+                            <constraint firstItem="Yu2-Fn-eJh" firstAttribute="leading" secondItem="1k6-of-PxR" secondAttribute="leadingMargin" id="ZIR-il-NE4"/>
+                            <constraint firstItem="Ewo-V3-xOc" firstAttribute="centerX" secondItem="1k6-of-PxR" secondAttribute="centerX" id="bGL-Ah-AMd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H3F-Bu-pFg" secondAttribute="trailing" id="e9j-gF-HG3"/>
+                            <constraint firstItem="Rnw-uh-p9K" firstAttribute="leading" secondItem="1k6-of-PxR" secondAttribute="leadingMargin" id="gMX-lH-JRr"/>
+                            <constraint firstItem="mRu-7L-Wlc" firstAttribute="top" secondItem="Ewo-V3-xOc" secondAttribute="bottom" constant="20" id="lhL-YT-3yP"/>
+                            <constraint firstItem="Ewo-V3-xOc" firstAttribute="top" secondItem="Rnw-uh-p9K" secondAttribute="bottom" constant="57" id="y5m-u8-44G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="bSw-p8-Yyv" id="yoP-xD-Pe6"/>
+                        <outlet property="companyNameField" destination="Yu2-Fn-eJh" id="nvR-fb-e9F"/>
+                        <outlet property="devShopSize" destination="Ehw-rG-zP4" id="Fcl-Wl-nwZ"/>
+                        <outlet property="emailField" destination="PPT-Jc-req" id="4eU-Bd-dqs"/>
+                        <outlet property="saveButtonOutlet" destination="Ewo-V3-xOc" id="hR3-U1-Paf"/>
+                        <outlet property="smallTeamSize" destination="KIg-Wv-5rE" id="LHZ-oo-l8G"/>
+                        <outlet property="websiteField" destination="gNM-dR-hPa" id="e4M-ar-baC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VC6-cj-8QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZn-vB-SXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="58"/>
+            <point key="canvasLocation" x="439" y="25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="234" height="216"/>
+    </resources>
 </document>

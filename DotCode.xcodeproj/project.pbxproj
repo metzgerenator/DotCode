@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
+		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		519F4AD64688B9AB778E5BD2 /* Pods_DotCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */; };
 		5722C7EF1E4FFB4900A6EBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7EE1E4FFB4900A6EBFC /* AppDelegate.swift */; };
 		5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7F01E4FFB4900A6EBFC /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
+		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A88A0D6D4AE765BF26386E /* Pods-DotCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5722C7EB1E4FFB4900A6EBFC /* DotCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2759730D1E75E53100DABF22 /* createAccount_nonDev */ = {
+			isa = PBXGroup;
+			children = (
+				2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */,
+			);
+			name = createAccount_nonDev;
+			sourceTree = "<group>";
+		};
 		5722C7E21E4FFB4900A6EBFC = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +135,10 @@
 		5722C7ED1E4FFB4900A6EBFC /* DotCode */ = {
 			isa = PBXGroup;
 			children = (
+				2759730D1E75E53100DABF22 /* createAccount_nonDev */,
 				57AA421E1E6902AD004476E5 /* WelcomScreen */,
 				5755FFBF1E528E8200A2E1A6 /* main nav Developer */,
-				5722C80E1E50022100A6EBFC /* createAccount */,
+				5722C80E1E50022100A6EBFC /* createAccount_Dev */,
 				5722C8091E50017100A6EBFC /* Constants */,
 				5722C7EE1E4FFB4900A6EBFC /* AppDelegate.swift */,
 				5722C7F01E4FFB4900A6EBFC /* ViewController.swift */,
@@ -163,7 +174,7 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
-		5722C80E1E50022100A6EBFC /* createAccount */ = {
+		5722C80E1E50022100A6EBFC /* createAccount_Dev */ = {
 			isa = PBXGroup;
 			children = (
 				5722C8251E50033700A6EBFC /* Edit Skills */,
@@ -173,7 +184,7 @@
 				5722C80F1E50027A00A6EBFC /* inital account creation */,
 				5722C8041E4FFFBE00A6EBFC /* Authentication */,
 			);
-			name = createAccount;
+			name = createAccount_Dev;
 			sourceTree = "<group>";
 		};
 		5722C80F1E50027A00A6EBFC /* inital account creation */ = {
@@ -427,6 +438,7 @@
 				5722C8241E50032700A6EBFC /* PreviousClientsViewController.swift in Sources */,
 				57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */,
 				5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */,
+				2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */,
 				5722C82A1E50035600A6EBFC /* EditSkillsTableViewController.swift in Sources */,
 				5722C80B1E50017A00A6EBFC /* Constants.swift in Sources */,
 				5722C8141E50028F00A6EBFC /* TypeSelectViewController.swift in Sources */,
