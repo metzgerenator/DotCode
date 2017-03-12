@@ -99,11 +99,14 @@ class TypeSelectViewController: UIViewController {
             switch clientType {
             case DEVELOPER:
                 appendValues(values: [USERTYPE : DEVELOPER as AnyObject])
+                self.performSegue(withIdentifier: "accountDetails", sender: self)
                 
             case CLIENT:
                 appendValues(values: [USERTYPE : CLIENT as AnyObject])
+                self.performSegue(withIdentifier: "nonDev", sender: self)
             default:
-                break
+                
+               alertControllerView(title: "Select Usertype", message: "please select a user type")
             }
             
         } else {
@@ -115,7 +118,7 @@ class TypeSelectViewController: UIViewController {
         
         
         
-        self.performSegue(withIdentifier: "accountDetails", sender: self)
+        
         
     }
     
@@ -124,27 +127,46 @@ class TypeSelectViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let vc = segue.destination as! GenericAccountCreateViewController
-        if segue.identifier == "accountCreate" {
-            
-//            if let titleToSend = currentTitle {
-//                
-//                vc.devTypeTitle = titleToSend
-//                
-//                
-//                
-//            } else {
-//                
-//                vc.devTypeTitle = "I am developer or dev shop"
-//                
-//                
-//            }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            let vc = segue.destination as! GenericAccountCreateViewController
+//        if segue.identifier == "accountCreate" {
+//            
+////            if let titleToSend = currentTitle {
+////                
+////                vc.devTypeTitle = titleToSend
+////                
+////                
+////                
+////            } else {
+////                
+////                vc.devTypeTitle = "I am developer or dev shop"
+////                
+////                
+////            }
+// 
+//    }
  
+
+//}
+
+
+}
+
+
+extension TypeSelectViewController {
+    
+    func alertControllerView(title: String, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
     }
- 
-
+    
 }
 
-
-}
