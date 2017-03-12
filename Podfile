@@ -12,5 +12,8 @@ target 'DotCode' do
     pod 'IQKeyboardManagerSwift'
 
     pod 'FirebaseUI/Storage'
+    
+    pod 'Alamofire', '~> 4.4'
+    pod 'SwiftyJSON', '~> 3.1'
 
 end
