@@ -99,6 +99,7 @@ struct Developer {
     
     var developerSkills: [Skills]?
     
+    
     init() {
         
     }

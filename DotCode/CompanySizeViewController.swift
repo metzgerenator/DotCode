@@ -109,10 +109,7 @@ class CompanySizeViewController: UIViewController {
                 case SMALLTEAMTYPE:
                     self.setButtonBackgrounds(tagID: 2)
                     self.companySize = SMALLTEAMTYPE
-                    
-                case DEVSHOPTYPE:
-                    self.setButtonBackgrounds(tagID: 3)
-                    self.companySize = DEVSHOPTYPE
+          
                     
                 default:
                     break
@@ -195,15 +192,23 @@ class CompanySizeViewController: UIViewController {
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "description" {
+            
+            let vc = segue.destination as! ClientDescriptionViewController
+            vc.name = companyNameField.text
+            vc.location = cityField.text
+            
+            
+        }
+    
      }
-     */
+
     
 }
 //MARK: alert views

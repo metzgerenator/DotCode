@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="439" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Client Description View Controller-->
         <scene sceneID="dHx-qx-iZK">
             <objects>
-                <viewController id="0YX-Vj-Oup" sceneMemberID="viewController">
+                <viewController id="0YX-Vj-Oup" customClass="ClientDescriptionViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="81p-Bp-AcY"/>
                         <viewControllerLayoutGuide type="bottom" id="Nrv-H8-AN5"/>
@@ -167,8 +167,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iUO-aq-sLX" userLabel="Edit Description">
-                                <rect key="frame" x="12" y="298" width="122" height="38"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iUO-aq-sLX" userLabel="Edit Description">
+                                <rect key="frame" x="16" y="298" width="122" height="38"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="dI0-fs-f4U">
                                         <rect key="frame" x="0.0" y="0.0" width="23" height="38"/>
@@ -182,6 +182,9 @@
                                         <state key="normal" title="Edit Description ">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="editDescription:" destination="0YX-Vj-Oup" eventType="touchUpInside" id="tG9-o1-EgY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -203,25 +206,31 @@
                                         <state key="normal" title="Edit Social Media">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="editSocialMedia:" destination="0YX-Vj-Oup" eventType="touchUpInside" id="so4-rw-pPo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="4QS-B8-Tu1"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-Hb-72Q">
-                                <rect key="frame" x="12" y="20" width="350" height="201"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-Hb-72Q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="201"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="201" id="0zy-Dv-knP"/>
                                     <constraint firstAttribute="height" constant="200.66999999999999" id="jFP-hC-QAb"/>
                                 </constraints>
                                 <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="photoAction:" destination="0YX-Vj-Oup" eventType="touchUpInside" id="DH3-2Z-0wZ"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jpv-0P-r1W" userLabel="Devshop name">
-                                <rect key="frame" x="12" y="236" width="128" height="38"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jpv-0P-r1W" userLabel="Devshop name">
+                                <rect key="frame" x="16" y="236" width="89.5" height="38"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dev Shop Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-eN-1hZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClientName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-eN-1hZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -266,6 +275,10 @@
                             <constraint firstItem="Nrv-H8-AN5" firstAttribute="top" secondItem="GxX-yf-6Ca" secondAttribute="bottom" id="xjm-dg-iC3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientLocation" destination="mXv-YK-UcV" id="hNF-YY-0SC"/>
+                        <outlet property="clientName" destination="fsn-eN-1hZ" id="pkL-gd-qWK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-zm-Fah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
