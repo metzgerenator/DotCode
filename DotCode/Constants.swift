@@ -36,6 +36,11 @@ let PROJECTURLS = "URLS"
 let DEVELOPERSKILLS = "developer_skills"
 
 
+//Client types
+let Entrepeneur = "Entrepreneur"
+let Company  = "Company"
+
+
 
 
 let USERAVAILABILITY = "user_availability"
