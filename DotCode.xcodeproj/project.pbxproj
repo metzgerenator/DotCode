@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		270926C61E78D41A00DE0E0F /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270926C51E78D41A00DE0E0F /* ClientMain.storyboard */; };
+		270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */; };
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		270926C51E78D41A00DE0E0F /* ClientMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
+		270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSummaryViewController.swift; sourceTree = "<group>"; };
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		270926C41E78D33500DE0E0F /* mainNavNonDev */ = {
 			isa = PBXGroup;
 			children = (
+				270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */,
 				270926C51E78D41A00DE0E0F /* ClientMain.storyboard */,
 			);
 			name = mainNavNonDev;
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */,
+				270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */,
 				5722C8151E50028F00A6EBFC /* GenericAccountCreateViewController.swift in Sources */,
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
