@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZn-vB-SXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="25"/>
+            <point key="canvasLocation" x="292" y="25"/>
         </scene>
         <!--Client Description View Controller-->
         <scene sceneID="dHx-qx-iZK">
@@ -184,7 +184,6 @@
                                         </state>
                                         <connections>
                                             <action selector="editDescription:" destination="0YX-Vj-Oup" eventType="touchUpInside" id="tG9-o1-EgY"/>
-                                            <segue destination="A0H-JW-JU6" kind="presentation" id="K8K-PO-ip4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -256,6 +255,9 @@
                                 <state key="normal" title="Save Profile ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="0YX-Vj-Oup" eventType="touchUpInside" id="cej-Yd-ra6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -279,11 +281,21 @@
                     <connections>
                         <outlet property="clientLocation" destination="mXv-YK-UcV" id="hNF-YY-0SC"/>
                         <outlet property="clientName" destination="fsn-eN-1hZ" id="pkL-gd-qWK"/>
+                        <segue destination="A0H-JW-JU6" kind="presentation" identifier="description" id="ioY-Bt-79m"/>
+                        <segue destination="irY-2u-k2D" kind="presentation" identifier="clientMain" id="3MA-vX-scD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-zm-Fah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1126" y="25"/>
+        </scene>
+        <!--ClientMain-->
+        <scene sceneID="epn-Ao-K7d">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClientMain" id="irY-2u-k2D" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lg4-sI-6hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="526"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="8f4-i3-D0n">

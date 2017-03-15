@@ -34,7 +34,7 @@ class ClientDescriptionViewController: UIViewController {
     
     @IBAction func editDescription(_ sender: Any) {
         
-        
+        self.performSegue(withIdentifier: "description", sender: self)
         
         
     }
@@ -49,6 +49,10 @@ class ClientDescriptionViewController: UIViewController {
     }
     
     
+    @IBAction func saveAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "clientMain", sender:self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +69,12 @@ class ClientDescriptionViewController: UIViewController {
         currentUser.userAttributes { (Developer) in
             
             
-            
+//            if let clientName = Developer.companyName, let city = Developer.location {
+//                
+//                self.clientName.text = clientName
+//                self.loca
+//            }
+//            
             
             
             
