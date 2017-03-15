@@ -102,13 +102,13 @@ class CompanySizeViewController: UIViewController {
                 
                 switch companySize {
                     
-                case FREELANCERTYPE:
+                case Entrepeneur:
                     self.setButtonBackgrounds(tagID: 1)
-                    self.companySize = FREELANCERTYPE
+                    self.companySize = Entrepeneur
                     
-                case SMALLTEAMTYPE:
+                case COMPANY:
                     self.setButtonBackgrounds(tagID: 2)
-                    self.companySize = SMALLTEAMTYPE
+                    self.companySize = COMPANY
           
                     
                 default:

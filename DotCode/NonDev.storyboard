@@ -29,22 +29,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-Bu-pFg" userLabel="org size and label">
-                                <rect key="frame" x="16" y="140" width="343" height="121"/>
+                                <rect key="frame" x="16" y="140" width="343" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGe-OY-sAP">
-                                        <rect key="frame" x="155" y="0.0" width="33" height="21"/>
+                                        <rect key="frame" x="155.5" y="0.0" width="32.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-ia-wxS" userLabel="Company Size">
-                                        <rect key="frame" x="71" y="26" width="202" height="95"/>
+                                        <rect key="frame" x="70.5" y="25.5" width="202" height="94.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-vU-b5D" userLabel="Entrepreneur">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="94.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-TJ-SxW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="99" height="74"/>
+                                                        <rect key="frame" x="0.5" y="0.0" width="99" height="74"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="99" id="bnl-g6-kD2"/>
                                                             <constraint firstAttribute="height" constant="74" id="hRa-yY-7ZJ"/>
@@ -54,8 +54,8 @@
                                                             <action selector="EntrepreneurAction:" destination="oGS-en-r1J" eventType="touchUpInside" id="udt-rb-sdz"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-Wv-5rE">
-                                                        <rect key="frame" x="0.0" y="74" width="100" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-Wv-5rE">
+                                                        <rect key="frame" x="0.0" y="74" width="100" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yud-xa-Rgw" userLabel="Company">
-                                                <rect key="frame" x="103" y="0.0" width="99" height="95"/>
+                                                <rect key="frame" x="103" y="0.0" width="99" height="94.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-cr-ZQ2">
                                                         <rect key="frame" x="0.0" y="0.0" width="99" height="74"/>
@@ -76,8 +76,8 @@
                                                             <action selector="CompanyAction:" destination="oGS-en-r1J" eventType="touchUpInside" id="ik2-bL-lus"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-rG-zP4">
-                                                        <rect key="frame" x="13" y="74" width="73" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-rG-zP4">
+                                                        <rect key="frame" x="13" y="74" width="73" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
