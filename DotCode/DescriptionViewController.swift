@@ -2,7 +2,7 @@
 //  DescriptionViewController.swift
 //  ObjectiveCApp
 //
-//  Created by Aileen Taboy on 1/20/17.
+//  Created by Michael Metzger on 1/20/17.
 //  Copyright © 2017 Michael Metzger . All rights reserved.
 //
 

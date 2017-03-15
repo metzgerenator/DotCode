@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270926C61E78D41A00DE0E0F /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270926C51E78D41A00DE0E0F /* ClientMain.storyboard */; };
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270926C51E78D41A00DE0E0F /* ClientMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -108,11 +110,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270926C41E78D33500DE0E0F /* mainNavNonDev */ = {
+			isa = PBXGroup;
+			children = (
+				270926C51E78D41A00DE0E0F /* ClientMain.storyboard */,
+			);
+			name = mainNavNonDev;
+			sourceTree = "<group>";
+		};
 		2759730D1E75E53100DABF22 /* createAccount_nonDev */ = {
 			isa = PBXGroup;
 			children = (
 				2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */,
 				275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */,
+				2759730B1E75E11E00DABF22 /* NonDev.storyboard */,
 			);
 			name = createAccount_nonDev;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 		5722C7ED1E4FFB4900A6EBFC /* DotCode */ = {
 			isa = PBXGroup;
 			children = (
+				270926C41E78D33500DE0E0F /* mainNavNonDev */,
 				2759730D1E75E53100DABF22 /* createAccount_nonDev */,
 				57AA421E1E6902AD004476E5 /* WelcomScreen */,
 				5755FFBF1E528E8200A2E1A6 /* main nav Developer */,
@@ -147,7 +159,6 @@
 				5722C7F01E4FFB4900A6EBFC /* ViewController.swift */,
 				5722C7F51E4FFB4900A6EBFC /* Assets.xcassets */,
 				5722C8021E4FFBA100A6EBFC /* Main.storyboard */,
-				2759730B1E75E11E00DABF22 /* NonDev.storyboard */,
 				751179751E6FA87D009F37F6 /* Profile.storyboard */,
 				751179731E6FA84D009F37F6 /* Client.storyboard */,
 				751179711E6FA821009F37F6 /* Projects.storyboard */,
@@ -373,6 +384,7 @@
 				5722C7F61E4FFB4900A6EBFC /* Assets.xcassets in Resources */,
 				2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */,
 				751179721E6FA821009F37F6 /* Projects.storyboard in Resources */,
+				270926C61E78D41A00DE0E0F /* ClientMain.storyboard in Resources */,
 				5722C8031E4FFBA100A6EBFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
