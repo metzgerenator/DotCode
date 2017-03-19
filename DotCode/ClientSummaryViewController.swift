@@ -33,7 +33,31 @@ class ClientSummaryViewController: UIViewController {
 
         
         let currentUser = CurrentUser()
-        currentUser.userAttributes { (Developer) in
+        currentUser.userAttributes { (Client) in
+            
+            
+            if let name = Client.companyName {
+                
+                self.companyName.text = name
+            }
+            
+            if let clientLocation = Client.location {
+                
+                self.location.text = clientLocation
+                
+            }
+            
+            
+            if let webSite = Client.website {
+                
+                self.website.text = webSite
+                
+            }
+            
+            
+            
+            
+            
             
             
             
