@@ -9,16 +9,62 @@
 import UIKit
 
 class NewListingScrollViewController: UIViewController {
+    
+    
+    @IBOutlet var scrollView: UIScrollView!
+    
+    
 
+    @IBOutlet var pageControllerOutlet: UIPageControl!
+    
+    
+    @IBAction func pageControllerAction(_ sender: Any) {
+        
+        
+        
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //add other views to scrollview 
+        //project_size
+        //additional_questions
+        //additional_info
+        
+        let view1 = createStepController(storyBoardID: "project_size")
+        let view2 = createStepController(storyBoardID: "additional_questions")
+        let view3 = createStepController(storyBoardID: "additional_info")
+        
 
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    
+    func createStepController(storyBoardID: String) -> UIViewController {
+        
+        
+        let stepController = storyboard?.instantiateViewController(withIdentifier: storyBoardID)
+        
+        stepController?.view.translatesAutoresizingMaskIntoConstraints = false
+       
+        scrollView.addSubview((stepController?.view)!)
+        
+        addChildViewController(stepController!)
+        stepController?.didMove(toParentViewController: self)
+        
+        return stepController!
+        
+        
+        
     }
     
 
