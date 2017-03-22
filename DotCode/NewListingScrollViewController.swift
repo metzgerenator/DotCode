@@ -21,7 +21,17 @@ class NewListingScrollViewController: UIViewController {
     @IBOutlet var pageControllerOutlet: UIPageControl!
     
     
-    @IBAction func pageControllerAction(_ sender: Any) {
+    @IBAction func pageControllerAction(_ sender: UIPageControl) {
+        
+        let currentPage = sender.currentPage
+        let pageWidth = scrollView.bounds.width
+        let targetContentOffsetX = CGFloat(currentPage) * pageWidth
+        
+        
+        UIView.animate(withDuration: 0.33) {
+            
+            self.scrollView.contentOffset.x = targetContentOffsetX
+        }
         
         
         
@@ -95,3 +105,19 @@ class NewListingScrollViewController: UIViewController {
     */
 
 }
+
+
+extension NewListingScrollViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.bounds.width
+        let pageFraction = scrollView.contentOffset.x / pageWidth
+        
+        pageControllerOutlet.currentPage = Int(round(pageFraction))
+    }
+    
+    
+}
+
+
+

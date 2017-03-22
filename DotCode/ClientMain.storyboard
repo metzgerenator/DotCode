@@ -130,7 +130,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="vMe-MI-AZy">
                             <connections>
                                 <action selector="addListing:" destination="FKs-Vi-9V3" id="iGP-kf-dtn"/>
-                                <segue destination="tBU-uJ-3v7" kind="presentation" id="bV9-CM-8XP"/>
+                                <segue destination="Vo2-kK-BH1" kind="presentation" id="ZLr-fR-TnM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -166,58 +166,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUS-iW-37U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1095.2" y="147.97601199400302"/>
-        </scene>
-        <!--New Listing Scroll View Controller-->
-        <scene sceneID="Fxu-XF-j40">
-            <objects>
-                <viewController id="tBU-uJ-3v7" customClass="NewListingScrollViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2uk-ci-j0r"/>
-                        <viewControllerLayoutGuide type="bottom" id="EkY-sC-lkT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sxU-TE-BzO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-zC-Xfg">
-                                <rect key="frame" x="-10" y="20" width="395" height="647"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4vA-K8-ITx">
-                                        <rect key="frame" x="168" y="575" width="39" height="37"/>
-                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="CT0-Uf-Ux9"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="pageControllerAction:" destination="tBU-uJ-3v7" eventType="valueChanged" id="uRj-AQ-aNJ"/>
-                                        </connections>
-                                    </pageControl>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4vA-K8-ITx" secondAttribute="bottom" constant="35" id="87n-d4-i6f"/>
-                                    <constraint firstItem="4vA-K8-ITx" firstAttribute="leading" secondItem="Aw2-zC-Xfg" secondAttribute="leading" constant="168" id="8uo-Vn-sLg"/>
-                                    <constraint firstAttribute="trailing" secondItem="4vA-K8-ITx" secondAttribute="trailing" constant="168" id="ADF-PO-rT5"/>
-                                    <constraint firstItem="4vA-K8-ITx" firstAttribute="top" secondItem="Aw2-zC-Xfg" secondAttribute="top" constant="575" id="Rjr-v0-3dj"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Aw2-zC-Xfg" secondAttribute="trailing" constant="-10" id="C4J-24-MIc"/>
-                            <constraint firstItem="Aw2-zC-Xfg" firstAttribute="leading" secondItem="sxU-TE-BzO" secondAttribute="leading" constant="-10" id="RFy-dk-J3y"/>
-                            <constraint firstItem="EkY-sC-lkT" firstAttribute="top" secondItem="Aw2-zC-Xfg" secondAttribute="bottom" id="nSk-1A-6Zp"/>
-                            <constraint firstItem="Aw2-zC-Xfg" firstAttribute="top" secondItem="2uk-ci-j0r" secondAttribute="bottom" id="yDQ-Gf-SFn"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="wax-K1-7tb"/>
-                    <connections>
-                        <outlet property="pageControllerOutlet" destination="4vA-K8-ITx" id="FkI-tZ-fth"/>
-                        <outlet property="scrollView" destination="Aw2-zC-Xfg" id="Y5S-uE-KmA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kh1-rL-Z75" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1328.8" y="873.91304347826099"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f8g-IP-Hzr">
@@ -545,6 +493,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4A-7S-Vtu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="156" y="147.97601199400302"/>
+        </scene>
+        <!--New Listing Scroll View Controller-->
+        <scene sceneID="X3V-hD-1QQ">
+            <objects>
+                <viewController id="Vo2-kK-BH1" customClass="NewListingScrollViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9s-il-jGa"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZ1-bb-SAB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2JZ-qg-pjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toj-aW-Pru">
+                                <rect key="frame" x="-10" y="0.0" width="395" height="667"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Vo2-kK-BH1" id="CAL-D3-G0x"/>
+                                </connections>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fmD-ft-QjG">
+                                <rect key="frame" x="0.0" y="480" width="375" height="37"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="xbd-PI-u6E">
+                                        <rect key="frame" x="160" y="0.0" width="55" height="37"/>
+                                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.095617018639999996" green="0.36207413669999999" blue="0.51181823019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="pageControllerAction:" destination="Vo2-kK-BH1" eventType="valueChanged" id="gLu-Ra-048"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IZ1-bb-SAB" firstAttribute="top" secondItem="fmD-ft-QjG" secondAttribute="bottom" constant="150" id="Dei-NK-9Te"/>
+                            <constraint firstItem="Toj-aW-Pru" firstAttribute="leading" secondItem="2JZ-qg-pjI" secondAttribute="leading" constant="-10" id="FVB-wt-K2H"/>
+                            <constraint firstAttribute="trailing" secondItem="fmD-ft-QjG" secondAttribute="trailing" id="SLb-8X-Qpm"/>
+                            <constraint firstAttribute="bottom" secondItem="Toj-aW-Pru" secondAttribute="bottom" id="dvG-xN-GYj"/>
+                            <constraint firstAttribute="trailing" secondItem="Toj-aW-Pru" secondAttribute="trailing" constant="-10" id="jiS-vF-5FQ"/>
+                            <constraint firstItem="fmD-ft-QjG" firstAttribute="leading" secondItem="2JZ-qg-pjI" secondAttribute="leading" id="l7w-CS-08b"/>
+                            <constraint firstItem="Toj-aW-Pru" firstAttribute="top" secondItem="2JZ-qg-pjI" secondAttribute="top" id="olC-iS-UBs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControllerOutlet" destination="xbd-PI-u6E" id="T0R-Tz-f91"/>
+                        <outlet property="scrollView" destination="Toj-aW-Pru" id="FQl-sq-i6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOn-ep-wgf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="896"/>
         </scene>
     </scenes>
     <resources>
