@@ -11,6 +11,9 @@ import UIKit
 class NewListingScrollViewController: UIViewController {
     
     
+    var pages = [UIViewController]()
+    
+    
     @IBOutlet var scrollView: UIScrollView!
     
     
@@ -28,14 +31,27 @@ class NewListingScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //add other views to scrollview 
-        //project_size
-        //additional_questions
-        //additional_info
+       scrollView.isPagingEnabled = true
         
         let view1 = createStepController(storyBoardID: "project_size")
         let view2 = createStepController(storyBoardID: "additional_questions")
         let view3 = createStepController(storyBoardID: "additional_info")
+        
+        pages = [view1, view2, view3]
+        
+        pageControllerOutlet.numberOfPages = pages.count
+        
+        let views = ["view" : view, "page1" : view1.view, "page2" : view2.view, "page3" : view3.view]
+        
+        let metrics = ["edgeMargin" : 10, "betweenMargin" : 20]
+        
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[page1(==view)]|", options: .init(rawValue: 0), metrics: nil, views: views)
+        NSLayoutConstraint.activate(verticalConstraints)
+        
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-edgeMargin-[page1(==view)]-betweenMargin-[page2(==view)]-betweenMargin-[page3(==view)]-betweenMargin-|", options: [.alignAllTop, .alignAllBottom], metrics: metrics, views: views)
+        
+        NSLayoutConstraint.activate(horizontalConstraints)
+        
         
 
        
