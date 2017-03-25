@@ -16,6 +16,15 @@ class ProjectSizeViewController: UIViewController {
     
     
     
+    
+    
+    @IBOutlet var webSiteOutlet: UILabel!
+    
+    
+    @IBOutlet var appOUtlet: UILabel!
+    
+    @IBOutlet var webAppOutlet: UILabel!
+    
 
     @IBAction func nextButton(_ sender: Any) {
         
@@ -24,25 +33,23 @@ class ProjectSizeViewController: UIViewController {
         
     }
     
-    @IBOutlet var webSiteOutlet: UIButton!
-    
-    @IBOutlet var appOutlet: UIButton!
+
     
     
-    @IBOutlet var webAppOutlet: UIButton!
-    
-    
-    @IBAction func webSiteAction(_ sender: Any) {
+    @IBAction func webSiteAction(_ sender: UIButton) {
+        
+        setButtonBackgrounds(tagID: sender.tag)
         
     }
     
-    @IBAction func appAction(_ sender: Any) {
-        
+    @IBAction func appAction(_ sender: UIButton) {
+        setButtonBackgrounds(tagID: sender.tag)
         
     }
     
-    @IBAction func webAppAction(_ sender: Any) {
+    @IBAction func webAppAction(_ sender: UIButton) {
         
+        setButtonBackgrounds(tagID: sender.tag)
         
     }
     
@@ -59,17 +66,45 @@ class ProjectSizeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+//MARK: change button states 
+
+extension ProjectSizeViewController {
+    
+    
+    func setButtonBackgrounds(tagID: Int) {
+        
+        
+        self.webSiteOutlet.backgroundColor = UIColor.white
+        self.appOUtlet.backgroundColor = UIColor.white
+        self.webAppOutlet.backgroundColor = UIColor.white
+        
+       // change this to switch on labels
+        switch tagID {
+        case 1:
+            self.webSiteOutlet.backgroundColor = UIColor.gray
+            
+        case 2:
+            self.appOUtlet.backgroundColor = UIColor.gray
+            
+        case 3:
+            self.webAppOutlet.backgroundColor = UIColor.gray
+        default:
+            break
+        }
+        
+    }
+    
+    
+    
+}
+
+
+
+
 
 
 

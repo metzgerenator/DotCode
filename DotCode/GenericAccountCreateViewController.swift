@@ -59,7 +59,6 @@ class GenericAccountCreateViewController: UIViewController {
     func setButtonBackgrounds(tagID: Int) {
         
         
-        
         self.freelanceSize.backgroundColor = UIColor.white
         self.smallTeamSize.backgroundColor = UIColor.white
         self.devShopSize.backgroundColor = UIColor.white
@@ -76,10 +75,7 @@ class GenericAccountCreateViewController: UIViewController {
         default:
             break
         }
-       
-        
-        
-        
+ 
     }
     
     

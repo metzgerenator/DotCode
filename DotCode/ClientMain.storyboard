@@ -191,7 +191,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nf2-Ch-q8b" userLabel="Website">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="101.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRU-RZ-g4x">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRU-RZ-g4x">
                                                 <rect key="frame" x="7.5" y="0.0" width="91" height="81"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="81" id="GeQ-dV-5aU"/>
@@ -213,7 +213,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L29-3U-irZ" userLabel="App">
                                         <rect key="frame" x="117" y="0.0" width="105.5" height="101.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEx-wB-gUi">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEx-wB-gUi">
                                                 <rect key="frame" x="7" y="0.0" width="91" height="81"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="81" id="Jcj-ya-1OM"/>
@@ -235,7 +235,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-fF-UKu" userLabel="Web App">
                                         <rect key="frame" x="233.5" y="0.0" width="109.5" height="101.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwV-NZ-jAD">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwV-NZ-jAD">
                                                 <rect key="frame" x="9.5" y="0.0" width="91" height="81"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="91" id="94n-JC-SwK"/>
@@ -277,9 +277,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="appOutlet" destination="UEx-wB-gUi" id="d8f-T6-zrP"/>
-                        <outlet property="webAppOutlet" destination="HwV-NZ-jAD" id="elZ-hS-dAb"/>
-                        <outlet property="webSiteOutlet" destination="IRU-RZ-g4x" id="8Qc-Rm-kEM"/>
+                        <outlet property="appOUtlet" destination="34j-zS-vcz" id="bYe-SK-JPM"/>
+                        <outlet property="webAppOutlet" destination="wgF-is-3Wf" id="L8a-ql-SU5"/>
+                        <outlet property="webSiteOutlet" destination="bNx-4W-xpf" id="vxH-AE-BLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi5-4j-63V" userLabel="First Responder" sceneMemberID="firstResponder"/>
