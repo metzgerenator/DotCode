@@ -23,7 +23,17 @@ class NewListingScrollViewController: UIViewController {
     
     @IBAction func pageControllerAction(_ sender: UIPageControl) {
         
-        let currentPage = sender.currentPage
+        turnPageController(page: sender.currentPage)
+        
+        
+    }
+    
+    
+    //add turn page function
+    
+    func turnPageController(page: Int) {
+        
+        let currentPage = page
         let pageWidth = scrollView.bounds.width
         let targetContentOffsetX = CGFloat(currentPage) * pageWidth
         
@@ -33,8 +43,6 @@ class NewListingScrollViewController: UIViewController {
             self.scrollView.contentOffset.x = targetContentOffsetX
         }
         
-        
-        
     }
 
     
@@ -43,13 +51,14 @@ class NewListingScrollViewController: UIViewController {
         
        scrollView.isPagingEnabled = true
         
-        let view1 = createStepController(storyBoardID: "project_size")
+        let view1 = createStepController(storyBoardID: "project_size") as! ProjectSizeViewController
         let view2 = createStepController(storyBoardID: "additional_questions")
         let view3 = createStepController(storyBoardID: "additional_info")
         
         let view4 = createStepController(storyBoardID: "name_listing")
         
         
+        view1.delegate = self
         
         pages = [view1, view2, view3, view4]
         
@@ -98,20 +107,17 @@ class NewListingScrollViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
 
 
-extension NewListingScrollViewController: UIScrollViewDelegate {
+extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate {
+    internal func buttonPressed(page: Int) {
+        turnPageController(page: page)
+    }
+
+
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.bounds.width
@@ -121,6 +127,12 @@ extension NewListingScrollViewController: UIScrollViewDelegate {
     }
     
     
+}
+
+
+//MARK: turn page protocol
+protocol nextButtonDelegate {
+    func buttonPressed(page: Int)
 }
 
 

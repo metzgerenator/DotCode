@@ -198,6 +198,9 @@
                                                     <constraint firstAttribute="width" constant="91" id="Sqn-Gh-ERd"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="camera"/>
+                                                <connections>
+                                                    <action selector="webSiteAction:" destination="iPt-gT-Hg0" eventType="touchUpInside" id="ZCa-Mf-X3E"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNx-4W-xpf">
                                                 <rect key="frame" x="22" y="81" width="62" height="20.5"/>
@@ -217,6 +220,9 @@
                                                     <constraint firstAttribute="width" constant="91" id="eiU-F5-4fU"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="camera"/>
+                                                <connections>
+                                                    <action selector="appAction:" destination="iPt-gT-Hg0" eventType="touchUpInside" id="tcP-EV-Mfu"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34j-zS-vcz">
                                                 <rect key="frame" x="37" y="81" width="31.5" height="20.5"/>
@@ -236,6 +242,9 @@
                                                     <constraint firstAttribute="height" constant="81" id="kI1-EI-fhJ"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="camera"/>
+                                                <connections>
+                                                    <action selector="webAppAction:" destination="iPt-gT-Hg0" eventType="touchUpInside" id="Eim-dD-mgF"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgF-is-3Wf">
                                                 <rect key="frame" x="19.5" y="81" width="70.5" height="20.5"/>
@@ -267,6 +276,11 @@
                             <constraint firstItem="Pnh-vL-Dj5" firstAttribute="leading" secondItem="2oP-p5-n0e" secondAttribute="leadingMargin" id="yia-mF-cZQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appOutlet" destination="UEx-wB-gUi" id="d8f-T6-zrP"/>
+                        <outlet property="webAppOutlet" destination="HwV-NZ-jAD" id="elZ-hS-dAb"/>
+                        <outlet property="webSiteOutlet" destination="IRU-RZ-g4x" id="8Qc-Rm-kEM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi5-4j-63V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

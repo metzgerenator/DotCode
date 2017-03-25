@@ -9,9 +9,39 @@
 import UIKit
 
 class ProjectSizeViewController: UIViewController {
+    
+    
+    
+    var delegate: nextButtonDelegate?
+    
+    
+    
 
     @IBAction func nextButton(_ sender: Any) {
         
+        delegate?.buttonPressed(page: 1)
+        
+        
+    }
+    
+    @IBOutlet var webSiteOutlet: UIButton!
+    
+    @IBOutlet var appOutlet: UIButton!
+    
+    
+    @IBOutlet var webAppOutlet: UIButton!
+    
+    
+    @IBAction func webSiteAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func appAction(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func webAppAction(_ sender: Any) {
         
         
     }
@@ -40,3 +70,7 @@ class ProjectSizeViewController: UIViewController {
     */
 
 }
+
+
+
+
