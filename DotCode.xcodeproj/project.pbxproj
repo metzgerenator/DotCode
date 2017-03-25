@@ -14,6 +14,7 @@
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
 		27729D1B1E86CC330048FE4B /* ProjectSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */; };
+		27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */; };
 		519F4AD64688B9AB778E5BD2 /* Pods_DotCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */; };
 		5722C7EF1E4FFB4900A6EBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7EE1E4FFB4900A6EBFC /* AppDelegate.swift */; };
 		5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7F01E4FFB4900A6EBFC /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
 		27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSizeViewController.swift; sourceTree = "<group>"; };
+		27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamAndRegionViewController.swift; sourceTree = "<group>"; };
 		42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A88A0D6D4AE765BF26386E /* Pods-DotCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5722C7EB1E4FFB4900A6EBFC /* DotCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 			children = (
 				2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */,
 				27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */,
+				27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */,
 			);
 			name = CreateListing;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */,
 				5722C8151E50028F00A6EBFC /* GenericAccountCreateViewController.swift in Sources */,
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
+				27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */,
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
 				5722C8231E50032700A6EBFC /* PreviousClientTableViewCell.swift in Sources */,
 				57AA42221E6902C3004476E5 /* WelcomeScreenViewController.swift in Sources */,
