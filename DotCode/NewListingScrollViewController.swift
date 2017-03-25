@@ -47,18 +47,22 @@ class NewListingScrollViewController: UIViewController {
         let view2 = createStepController(storyBoardID: "additional_questions")
         let view3 = createStepController(storyBoardID: "additional_info")
         
-        pages = [view1, view2, view3]
+        let view4 = createStepController(storyBoardID: "name_listing")
+        
+        
+        
+        pages = [view1, view2, view3, view4]
         
         pageControllerOutlet.numberOfPages = pages.count
         
-        let views = ["view" : view, "page1" : view1.view, "page2" : view2.view, "page3" : view3.view]
+        let views = ["view" : view, "page1" : view1.view, "page2" : view2.view, "page3" : view3.view, "page4" : view4.view]
         
         let metrics = ["edgeMargin" : 10, "betweenMargin" : 20]
         
         let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[page1(==view)]|", options: .init(rawValue: 0), metrics: nil, views: views)
         NSLayoutConstraint.activate(verticalConstraints)
         
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-edgeMargin-[page1(==view)]-betweenMargin-[page2(==view)]-betweenMargin-[page3(==view)]-betweenMargin-|", options: [.alignAllTop, .alignAllBottom], metrics: metrics, views: views)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-edgeMargin-[page1(==view)]-betweenMargin-[page2(==view)]-betweenMargin-[page3(==view)]-betweenMargin-[page4(==view)]-betweenMargin-|", options: [.alignAllTop, .alignAllBottom], metrics: metrics, views: views)
         
         NSLayoutConstraint.activate(horizontalConstraints)
         
