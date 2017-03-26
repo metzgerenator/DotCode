@@ -127,16 +127,18 @@ class NewListingScrollViewController: UIViewController {
 
 extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate, SaveNewProjectDelegate {
     
-    
+    //save the job to firebase
     internal func postJob() {
-        print("saving project")
+        if jobPost.count > 0 {
+          postAJob(values: jobPost)
+        }
+        
     }
 
-    
+    //add to dictionary for job to be saved
     internal func appendToProject(key: String, value: String) {
         jobPost.updateValue(value as AnyObject, forKey: key)
         
-        print("jobpost now \(jobPost)")
     }
 
     internal func buttonPressed(page: Int) {
