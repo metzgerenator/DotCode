@@ -12,6 +12,8 @@ class NewListingScrollViewController: UIViewController {
     
     
     var pages = [UIViewController]()
+    var jobPost = [String : AnyObject]()
+    
     
     
     @IBOutlet var scrollView: UIScrollView!
@@ -114,7 +116,11 @@ class NewListingScrollViewController: UIViewController {
 }
 
 
-extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate {
+extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate {
+    internal func appendToProject(key: String, value: String) {
+        jobPost.updateValue(value as AnyObject, forKey: key)
+    }
+
     internal func buttonPressed(page: Int) {
         turnPageController(page: page)
     }
@@ -132,9 +138,14 @@ extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelega
 }
 
 
-//MARK: turn page protocol
+//MARK: Protocols
 protocol nextButtonDelegate {
     func buttonPressed(page: Int)
+}
+
+protocol NewProjectDictionaryDelegate{
+    
+    func appendToProject(key: String, value: String)
 }
 
 
