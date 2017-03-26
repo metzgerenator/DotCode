@@ -504,10 +504,10 @@
             </objects>
             <point key="canvasLocation" x="2820" y="868.51574212893559"/>
         </scene>
-        <!--View Controller-->
+        <!--Job Description View Controller-->
         <scene sceneID="Mdp-Xy-oc8">
             <objects>
-                <viewController storyboardIdentifier="additional_info" id="RVN-a4-Sqb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="additional_info" id="RVN-a4-Sqb" customClass="JobDescriptionViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nH-5r-dDW"/>
                         <viewControllerLayoutGuide type="bottom" id="wla-Ay-Vby"/>
@@ -526,6 +526,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-H6-bra">
                                 <rect key="frame" x="171.5" y="521" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="RVN-a4-Sqb" eventType="touchUpInside" id="3Qt-Pa-qo3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -534,15 +537,18 @@
                             <constraint firstItem="wla-Ay-Vby" firstAttribute="top" secondItem="J6E-H6-bra" secondAttribute="bottom" constant="116" id="38h-ec-CAR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="desCriptionOutlet" destination="qtX-bl-Nsc" id="g1S-FN-gBF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxs-TS-7lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3546.4000000000001" y="866.71664167916049"/>
         </scene>
-        <!--View Controller-->
+        <!--Name Listing View Controller-->
         <scene sceneID="2Bd-Tt-9Zj">
             <objects>
-                <viewController storyboardIdentifier="name_listing" id="IkJ-Mj-KrA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="name_listing" id="IkJ-Mj-KrA" customClass="NameListingViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lm7-hB-mdY"/>
                         <viewControllerLayoutGuide type="bottom" id="UfZ-eW-d3r"/>
@@ -571,6 +577,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cx-HT-gNm">
                                 <rect key="frame" x="170" y="275" width="35" height="30"/>
                                 <state key="normal" title="Post "/>
+                                <connections>
+                                    <action selector="postActionButton:" destination="IkJ-Mj-KrA" eventType="touchUpInside" id="4WX-I2-7ag"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

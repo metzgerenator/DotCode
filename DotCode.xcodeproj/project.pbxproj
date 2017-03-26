@@ -10,6 +10,8 @@
 		270926C61E78D41A00DE0E0F /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270926C51E78D41A00DE0E0F /* ClientMain.storyboard */; };
 		270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */; };
 		2709CCDA1E7F4281001251C0 /* NewListingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */; };
+		271B047C1E873B4300F31CE0 /* JobDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */; };
+		271B047E1E87407100F31CE0 /* NameListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B047D1E87407100F31CE0 /* NameListingViewController.swift */; };
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
@@ -58,6 +60,8 @@
 		270926C51E78D41A00DE0E0F /* ClientMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
 		270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSummaryViewController.swift; sourceTree = "<group>"; };
 		2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListingScrollViewController.swift; sourceTree = "<group>"; };
+		271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDescriptionViewController.swift; sourceTree = "<group>"; };
+		271B047D1E87407100F31CE0 /* NameListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameListingViewController.swift; sourceTree = "<group>"; };
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */,
 				27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */,
 				27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */,
+				271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */,
+				271B047D1E87407100F31CE0 /* NameListingViewController.swift */,
 			);
 			name = CreateListing;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */,
 				2709CCDA1E7F4281001251C0 /* NewListingScrollViewController.swift in Sources */,
 				270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */,
+				271B047C1E873B4300F31CE0 /* JobDescriptionViewController.swift in Sources */,
 				5722C8151E50028F00A6EBFC /* GenericAccountCreateViewController.swift in Sources */,
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
 				27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */,
@@ -487,6 +494,7 @@
 				5722C81C1E5002E000A6EBFC /* AddPortfoliotCollectionReusableView.swift in Sources */,
 				5722C82B1E50035600A6EBFC /* EditSkillsTableViewCell.swift in Sources */,
 				5722C82C1E50035600A6EBFC /* skillsStruct.swift in Sources */,
+				271B047E1E87407100F31CE0 /* NameListingViewController.swift in Sources */,
 				5722C8081E50000F00A6EBFC /* Users.swift in Sources */,
 				5722C8321E50036900A6EBFC /* DescriptionViewController.swift in Sources */,
 				5722C8071E50000F00A6EBFC /* LoginViewController.swift in Sources */,

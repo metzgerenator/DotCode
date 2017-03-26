@@ -53,13 +53,14 @@ class NewListingScrollViewController: UIViewController {
         
         let view1 = createStepController(storyBoardID: "project_size") as! ProjectSizeViewController
         let view2 = createStepController(storyBoardID: "additional_questions") as! TeamAndRegionViewController
-        let view3 = createStepController(storyBoardID: "additional_info")
+        let view3 = createStepController(storyBoardID: "additional_info") as! JobDescriptionViewController
         
         let view4 = createStepController(storyBoardID: "name_listing")
         
         //delegates to self
         view1.delegate = self
         view2.delegate = self
+        view3.delegate = self
         
         pages = [view1, view2, view3, view4]
         
