@@ -91,6 +91,8 @@ let ANYWHERE = "anywhere"
 //jobpost name 
 let JOBPOSTNAME = "Job Post Name"
 
+let JOBPOSTDATE = "Post Date"
+
 
 extension Date {
     

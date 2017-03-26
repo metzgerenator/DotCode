@@ -21,6 +21,7 @@ class NameListingViewController: UIViewController {
         if (projectNameOutlet.text?.characters.count)! > 0 {
             //append name of job
             addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
+            addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date())")
             //save project
             saveProjectDelegate?.postJob()
 
