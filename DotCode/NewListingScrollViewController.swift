@@ -66,6 +66,7 @@ class NewListingScrollViewController: UIViewController {
         
         //delegates for appending 
         view1.addProjectDelegate = self
+        view2.addProjectDelegate = self
         
         pages = [view1, view2, view3, view4]
         
@@ -144,6 +145,9 @@ extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelega
 
 
 //MARK: Protocols
+
+//add protocol for saving
+
 protocol nextButtonDelegate {
     func buttonPressed(page: Int)
 }

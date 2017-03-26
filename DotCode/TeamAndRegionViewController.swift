@@ -12,6 +12,7 @@ class TeamAndRegionViewController: UIViewController {
     
     
     var delegate: nextButtonDelegate?
+    var addProjectDelegate: NewProjectDictionaryDelegate?
     //MARK: size selection outlet
     
     @IBOutlet var freeLancerOutlet: UILabel!
@@ -26,6 +27,7 @@ class TeamAndRegionViewController: UIViewController {
     //MARK: size selection action
     @IBAction func freelancerAction(_ sender: UIButton) {
         
+        addProjectDelegate?.appendToProject(key: COMPANYSIZE, value: FREELANCERTYPE)
         setButtonBackgroundsForSize(tagID: sender.tag)
         
     }
@@ -33,12 +35,13 @@ class TeamAndRegionViewController: UIViewController {
    
     @IBAction func smallTeamAction(_ sender: UIButton) {
         
+        addProjectDelegate?.appendToProject(key: COMPANYSIZE, value: SMALLTEAMTYPE)
         setButtonBackgroundsForSize(tagID: sender.tag)
     }
     
     
     @IBAction func devShopAction(_ sender: UIButton) {
-        
+        addProjectDelegate?.appendToProject(key: COMPANYSIZE, value: DEVSHOPTYPE)
         setButtonBackgroundsForSize(tagID: sender.tag)
         
     }
@@ -63,12 +66,15 @@ class TeamAndRegionViewController: UIViewController {
     
     @IBAction func sameCityAction(_ sender: UIButton) {
         
+        
+        addProjectDelegate?.appendToProject(key: USERLOCATION, value: SAMECITY)
         setButtonBackgroundsForRegion(tagID: sender.tag)
         
     }
     
     @IBAction func sameRegionAction(_ sender: UIButton) {
         
+        addProjectDelegate?.appendToProject(key: USERLOCATION, value: SAMEREGION)
         setButtonBackgroundsForRegion(tagID: sender.tag)
         
     }
@@ -76,6 +82,7 @@ class TeamAndRegionViewController: UIViewController {
     
     @IBAction func anyWhereAction(_ sender: UIButton) {
         
+        addProjectDelegate?.appendToProject(key: USERLOCATION, value: ANYWHERE)
         setButtonBackgroundsForRegion(tagID: sender.tag)
     }
     

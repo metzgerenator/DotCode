@@ -77,10 +77,16 @@ var currentUserDevType: String?
 
 //Client Job creatin 
 
-var JOBSIZE = "Job Size"
-var WEBAPP = "Web App"
-var APP = "App"
-var WEBSITE = "Web Site"
+let JOBSIZE = "Job Size"
+let WEBAPP = "Web App"
+let APP = "App"
+let WEBSITE = "Web Site"
+
+//Client required locations 
+
+let SAMECITY = "same city"
+let SAMEREGION = "same region"
+let ANYWHERE = "anywhere"
 
 
 
