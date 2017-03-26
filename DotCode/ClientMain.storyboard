@@ -592,6 +592,9 @@
                             <constraint firstItem="8cx-HT-gNm" firstAttribute="centerX" secondItem="AMe-3N-5TU" secondAttribute="centerX" id="pRg-EX-6CT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="projectNameOutlet" destination="ral-yw-A2c" id="DbU-yG-zdd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbT-c9-Y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

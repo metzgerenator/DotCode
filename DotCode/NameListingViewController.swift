@@ -9,10 +9,26 @@
 import UIKit
 
 class NameListingViewController: UIViewController {
+    
+    var addProjectDelegate: NewProjectDictionaryDelegate?
+    var saveProjectDelegate: SaveNewProjectDelegate?
 
+    
+    @IBOutlet var projectNameOutlet: UITextField!
+    
     @IBAction func postActionButton(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        if (projectNameOutlet.text?.characters.count)! > 0 {
+            //append name of job
+            addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
+            //save project
+            saveProjectDelegate?.postJob()
+
+        }
+        
+        
+        
+       self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -28,14 +44,6 @@ class NameListingViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

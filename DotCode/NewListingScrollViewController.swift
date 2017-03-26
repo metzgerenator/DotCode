@@ -57,7 +57,7 @@ class NewListingScrollViewController: UIViewController {
         guard let view2 = createStepController(storyBoardID: "additional_questions") as? TeamAndRegionViewController else {return}
         guard let view3 = createStepController(storyBoardID: "additional_info") as? JobDescriptionViewController else {return}
         
-        let view4 = createStepController(storyBoardID: "name_listing")
+       guard let view4 = createStepController(storyBoardID: "name_listing") as? NameListingViewController else {return}
         
         //delegates to self
         view1.delegate = self
@@ -68,6 +68,10 @@ class NewListingScrollViewController: UIViewController {
         view1.addProjectDelegate = self
         view2.addProjectDelegate = self
         view3.addProjectDelegate = self
+        view4.addProjectDelegate = self
+        
+        //delegate for saving project
+        view4.saveProjectDelegate = self
         
         pages = [view1, view2, view3, view4]
         
@@ -121,7 +125,14 @@ class NewListingScrollViewController: UIViewController {
 }
 
 
-extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate {
+extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate, SaveNewProjectDelegate {
+    
+    
+    internal func postJob() {
+        print("saving project")
+    }
+
+    
     internal func appendToProject(key: String, value: String) {
         jobPost.updateValue(value as AnyObject, forKey: key)
         
@@ -145,9 +156,9 @@ extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelega
 }
 
 
-//MARK: Protocols
+//MARK: delegates
 
-//add protocol for saving
+//add delegates for saving
 
 protocol nextButtonDelegate {
     func buttonPressed(page: Int)
@@ -157,6 +168,16 @@ protocol NewProjectDictionaryDelegate{
     
     func appendToProject(key: String, value: String)
 }
+
+protocol SaveNewProjectDelegate {
+    func postJob()
+}
+
+
+
+
+
+
 
 
 

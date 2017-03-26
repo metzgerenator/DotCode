@@ -88,7 +88,8 @@ let SAMECITY = "same city"
 let SAMEREGION = "same region"
 let ANYWHERE = "anywhere"
 
-
+//jobpost name 
+let JOBPOSTNAME = "Job Post Name"
 
 
 extension Date {
