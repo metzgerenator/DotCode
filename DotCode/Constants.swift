@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 
+//User profile complete 
+let COMPLETEPROFILE = "completed_profile"
+
 //company types new ones
 
 let USERTYPE = "user_type"

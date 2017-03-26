@@ -18,8 +18,6 @@ class NewListingScrollViewController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     
-    
-
     @IBOutlet var pageControllerOutlet: UIPageControl!
     
     

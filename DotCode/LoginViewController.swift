@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
     
     var ref: FIRDatabaseReference!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

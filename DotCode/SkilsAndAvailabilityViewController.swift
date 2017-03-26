@@ -47,7 +47,10 @@ class SkilsAndAvailabilityViewController: UIViewController {
         
         if let userAvailability = userAvailability {
             
+            
             appendValues(values: [USERAVAILABILITY : userAvailability as AnyObject])
+            
+            appendValues(values: [COMPLETEPROFILE : "True" as AnyObject])
         }
         
         
