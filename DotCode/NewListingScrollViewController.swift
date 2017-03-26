@@ -53,9 +53,9 @@ class NewListingScrollViewController: UIViewController {
         
        scrollView.isPagingEnabled = true
         
-        let view1 = createStepController(storyBoardID: "project_size") as! ProjectSizeViewController
-        let view2 = createStepController(storyBoardID: "additional_questions") as! TeamAndRegionViewController
-        let view3 = createStepController(storyBoardID: "additional_info") as! JobDescriptionViewController
+        guard let view1 = createStepController(storyBoardID: "project_size") as? ProjectSizeViewController else {return}
+        guard let view2 = createStepController(storyBoardID: "additional_questions") as? TeamAndRegionViewController else {return}
+        guard let view3 = createStepController(storyBoardID: "additional_info") as? JobDescriptionViewController else {return}
         
         let view4 = createStepController(storyBoardID: "name_listing")
         
@@ -67,6 +67,7 @@ class NewListingScrollViewController: UIViewController {
         //delegates for appending 
         view1.addProjectDelegate = self
         view2.addProjectDelegate = self
+        view3.addProjectDelegate = self
         
         pages = [view1, view2, view3, view4]
         

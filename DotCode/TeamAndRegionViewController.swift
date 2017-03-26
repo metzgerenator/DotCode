@@ -20,9 +20,7 @@ class TeamAndRegionViewController: UIViewController {
     @IBOutlet var smallTeamOutlet: UILabel!
     
     @IBOutlet var devShopOutlet: UILabel!
-    
-    
-    
+
     
     //MARK: size selection action
     @IBAction func freelancerAction(_ sender: UIButton) {
