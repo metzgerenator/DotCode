@@ -74,6 +74,17 @@ var currentUserDevType: String?
 
 
 
+
+//Client Job creatin 
+
+var JOBSIZE = "Job Size"
+var WEBAPP = "Web App"
+var APP = "App"
+var WEBSITE = "Web Site"
+
+
+
+
 extension Date {
     
     func westernTime() ->String{

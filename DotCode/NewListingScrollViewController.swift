@@ -64,6 +64,9 @@ class NewListingScrollViewController: UIViewController {
         view2.delegate = self
         view3.delegate = self
         
+        //delegates for appending 
+        view1.addProjectDelegate = self
+        
         pages = [view1, view2, view3, view4]
         
         pageControllerOutlet.numberOfPages = pages.count
@@ -119,6 +122,8 @@ class NewListingScrollViewController: UIViewController {
 extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate {
     internal func appendToProject(key: String, value: String) {
         jobPost.updateValue(value as AnyObject, forKey: key)
+        
+        print("jobpost now \(jobPost)")
     }
 
     internal func buttonPressed(page: Int) {

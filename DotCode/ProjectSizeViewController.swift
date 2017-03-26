@@ -11,11 +11,9 @@ import UIKit
 class ProjectSizeViewController: UIViewController {
     
     
-    
     var delegate: nextButtonDelegate?
     
-    
-    
+    var addProjectDelegate: NewProjectDictionaryDelegate?
     
     
     @IBOutlet var webSiteOutlet: UILabel!
@@ -28,6 +26,8 @@ class ProjectSizeViewController: UIViewController {
 
     @IBAction func nextButton(_ sender: Any) {
         
+    
+        
         delegate?.buttonPressed(page: 1)
         
         
@@ -38,17 +38,20 @@ class ProjectSizeViewController: UIViewController {
     
     @IBAction func webSiteAction(_ sender: UIButton) {
         
+  
+        addProjectDelegate?.appendToProject(key:JOBSIZE , value: WEBSITE)
         setButtonBackgrounds(tagID: sender.tag)
         
     }
     
     @IBAction func appAction(_ sender: UIButton) {
+        addProjectDelegate?.appendToProject(key:JOBSIZE , value: APP)
         setButtonBackgrounds(tagID: sender.tag)
         
     }
     
     @IBAction func webAppAction(_ sender: UIButton) {
-        
+        addProjectDelegate?.appendToProject(key:JOBSIZE , value: WEBAPP)
         setButtonBackgrounds(tagID: sender.tag)
         
     }
