@@ -21,12 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRDatabase.database().persistenceEnabled = true
         IQKeyboardManager.sharedManager().enable = true
         
+        
+        //switch root view controller if user is client and completed profile
         let prefs = UserDefaults.standard
         if let complete = prefs.value(forKey: COMPLETEPROFILE) as? Bool, let userType = prefs.value(forKey: USERTYPE) as? String {
             
-            if complete == true && userType == CLIENT {
+            if complete == true && userType == DEVELOPER {
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let profileStoryBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+                let tabBarcontroller = profileStoryBoard.instantiateViewController(withIdentifier: "dev_profile") as! UITabBarController
+                self.window?.rootViewController = tabBarcontroller
+                self.window?.makeKeyAndVisible()
                 
-                //switch initial storyboard
             }
             
             

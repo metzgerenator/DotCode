@@ -47,7 +47,7 @@ class SkilsAndAvailabilityViewController: UIViewController {
         //Set user defaults 
         let prefs = UserDefaults.standard
         prefs.set(true, forKey: COMPLETEPROFILE)
-        prefs.set(CLIENT, forKey: USERTYPE)
+        prefs.set(DEVELOPER, forKey: USERTYPE)
         
         
         if let userAvailability = userAvailability {
