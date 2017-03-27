@@ -99,6 +99,8 @@ struct Developer {
     
     var developerSkills: [Skills]?
     
+    var completedProfile: Bool?
+    
     
     init() {
         
@@ -129,6 +131,21 @@ struct Developer {
                 
             }
             self.developerSkills = developerSkillsArray
+        }
+        
+        
+        
+        if let completedProfile = userdata[COMPLETEPROFILE] {
+            
+            guard let completed = completedProfile as? String else {return}
+            
+            
+            if completed == "True" {
+                
+                self.completedProfile = true
+            }
+            
+            
         }
         
         

@@ -21,10 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRDatabase.database().persistenceEnabled = true
         IQKeyboardManager.sharedManager().enable = true
         
-        
-        //check for user type 
-        
-        
+        let prefs = UserDefaults.standard
+        if let complete = prefs.value(forKey: COMPLETEPROFILE) as? Bool, let userType = prefs.value(forKey: USERTYPE) as? String {
+            
+            if complete == true && userType == CLIENT {
+                
+                //switch initial storyboard
+            }
+            
+            
+        }
+       
         return true
     }
 
