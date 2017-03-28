@@ -20,10 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         IQKeyboardManager.sharedManager().enable = true
+        let prefs = UserDefaults.standard
         
+        
+        //uncomment to logout and clear user
+//        prefs.set(nil, forKey: COMPLETEPROFILE)
+//        prefs.set(nil, forKey: USERTYPE)
+//        let firebaseAuth = FIRAuth.auth()
+//        do {
+//            try firebaseAuth?.signOut()
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
         
         //switch root view controller if user is client and completed profile
-        let prefs = UserDefaults.standard
+        
         if let complete = prefs.value(forKey: COMPLETEPROFILE) as? Bool, let userType = prefs.value(forKey: USERTYPE) as? String {
             
             if complete == true && userType == DEVELOPER {

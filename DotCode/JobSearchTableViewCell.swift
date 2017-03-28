@@ -9,6 +9,15 @@
 import UIKit
 
 class JobSearchTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet var descriptionLabel: UILabel!
+    
+    @IBOutlet var studioNameLabel: UILabel!
+    
+    @IBOutlet var numberOfDaysAgo: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
