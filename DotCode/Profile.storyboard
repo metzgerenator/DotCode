@@ -210,24 +210,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-9E-rgK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-9E-rgK">
                                 <rect key="frame" x="0.0" y="195" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ogw-vI-XWu" customClass="JobSearchTableViewCell" customModule="DotCode" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="ogw-vI-XWu" customClass="JobSearchTableViewCell" customModule="DotCode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogw-vI-XWu" id="wth-FJ-I9A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0l8-wI-ZF2">
+                                                    <rect key="frame" x="8" y="8" width="359" height="84.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-nk-AUK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="305" height="58"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer need for education " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVK-fF-tev">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="277.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <color key="textColor" red="0.31754466891288757" green="0.44115820527076721" blue="0.91504383087158203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red lab studies " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-sg-Pcm">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="121.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.66654342412948608" green="0.66641318798065186" blue="0.68290573358535767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 days ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-r2-eVu">
+                                                                    <rect key="frame" x="0.0" y="41" width="70.5" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" red="0.6665434241" green="0.66641318800000005" blue="0.68290573359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWc-Dd-5L3">
+                                                            <rect key="frame" x="329" y="0.0" width="30" height="30"/>
+                                                            <state key="normal" title="Fav"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0l8-wI-ZF2" firstAttribute="leading" secondItem="wth-FJ-I9A" secondAttribute="leadingMargin" id="Vev-KD-4Fy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0l8-wI-ZF2" secondAttribute="bottom" id="W0z-Ja-6Gt"/>
+                                                <constraint firstItem="0l8-wI-ZF2" firstAttribute="top" secondItem="wth-FJ-I9A" secondAttribute="topMargin" id="bO6-zR-CPR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0l8-wI-ZF2" secondAttribute="trailing" id="siL-EI-Gp3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="JVK-fF-tev" id="B8P-DM-Zza"/>
+                                            <outlet property="numberOfDaysAgo" destination="8aI-r2-eVu" id="4VY-48-wfD"/>
+                                            <outlet property="studioNameLabel" destination="I3l-sg-Pcm" id="eLC-ji-GdQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dWw-Jh-BEd" id="B62-wZ-Sbf"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234 jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fQ-Kx-rqi">
+                                <rect key="frame" x="16" y="103" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SUl-yK-EWx" firstAttribute="top" secondItem="NeQ-9E-rgK" secondAttribute="bottom" id="7BL-W8-veA"/>
+                            <constraint firstItem="2fQ-Kx-rqi" firstAttribute="leading" secondItem="3bY-vm-TkX" secondAttribute="leadingMargin" id="K9b-A8-OI5"/>
+                            <constraint firstItem="2fQ-Kx-rqi" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" constant="39" id="V8n-mv-Sfb"/>
                             <constraint firstItem="NeQ-9E-rgK" firstAttribute="leading" secondItem="3bY-vm-TkX" secondAttribute="leading" id="pq2-4n-gaG"/>
                             <constraint firstAttribute="trailing" secondItem="NeQ-9E-rgK" secondAttribute="trailing" id="trA-OR-avB"/>
                             <constraint firstItem="NeQ-9E-rgK" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" constant="131" id="u8f-rP-XWk"/>
@@ -236,10 +292,13 @@
                     <navigationItem key="navigationItem" id="TPg-ve-DAW">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="Dp0-UI-1Ik"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="NeQ-9E-rgK" id="t1m-R6-s5y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t49-L1-C6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4929" y="965"/>
+            <point key="canvasLocation" x="4928.8000000000002" y="964.76761619190415"/>
         </scene>
         <!--Search-->
         <scene sceneID="d5N-kp-4hY">
