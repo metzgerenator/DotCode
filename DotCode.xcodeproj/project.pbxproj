@@ -14,6 +14,7 @@
 		271B047E1E87407100F31CE0 /* NameListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B047D1E87407100F31CE0 /* NameListingViewController.swift */; };
 		271B04811E889A2200F31CE0 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B04801E889A2200F31CE0 /* JobSearchViewController.swift */; };
 		271B04831E889A8700F31CE0 /* JobSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */; };
+		272C7E471E89F1AA00763797 /* JobSearchFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */; };
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
@@ -66,6 +67,7 @@
 		271B047D1E87407100F31CE0 /* NameListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameListingViewController.swift; sourceTree = "<group>"; };
 		271B04801E889A2200F31CE0 /* JobSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchTableViewCell.swift; sourceTree = "<group>"; };
+		272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchFunctions.swift; sourceTree = "<group>"; };
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				271B04801E889A2200F31CE0 /* JobSearchViewController.swift */,
 				271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */,
+				272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */,
 			);
 			name = "Job Search";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */,
 				5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */,
 				27729D1B1E86CC330048FE4B /* ProjectSizeViewController.swift in Sources */,
+				272C7E471E89F1AA00763797 /* JobSearchFunctions.swift in Sources */,
 				2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */,
 				5722C82A1E50035600A6EBFC /* EditSkillsTableViewController.swift in Sources */,
 				271B04831E889A8700F31CE0 /* JobSearchTableViewCell.swift in Sources */,
