@@ -10,9 +10,16 @@
 		270926C61E78D41A00DE0E0F /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270926C51E78D41A00DE0E0F /* ClientMain.storyboard */; };
 		270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */; };
 		2709CCDA1E7F4281001251C0 /* NewListingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */; };
+		271B047C1E873B4300F31CE0 /* JobDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */; };
+		271B047E1E87407100F31CE0 /* NameListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B047D1E87407100F31CE0 /* NameListingViewController.swift */; };
+		271B04811E889A2200F31CE0 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B04801E889A2200F31CE0 /* JobSearchViewController.swift */; };
+		271B04831E889A8700F31CE0 /* JobSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */; };
+		272C7E471E89F1AA00763797 /* JobSearchFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */; };
 		2759730C1E75E11E00DABF22 /* NonDev.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759730B1E75E11E00DABF22 /* NonDev.storyboard */; };
 		2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */; };
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
+		27729D1B1E86CC330048FE4B /* ProjectSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */; };
+		27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */; };
 		519F4AD64688B9AB778E5BD2 /* Pods_DotCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */; };
 		5722C7EF1E4FFB4900A6EBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7EE1E4FFB4900A6EBFC /* AppDelegate.swift */; };
 		5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7F01E4FFB4900A6EBFC /* ViewController.swift */; };
@@ -56,9 +63,16 @@
 		270926C51E78D41A00DE0E0F /* ClientMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
 		270926C71E78E44500DE0E0F /* ClientSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSummaryViewController.swift; sourceTree = "<group>"; };
 		2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListingScrollViewController.swift; sourceTree = "<group>"; };
+		271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDescriptionViewController.swift; sourceTree = "<group>"; };
+		271B047D1E87407100F31CE0 /* NameListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameListingViewController.swift; sourceTree = "<group>"; };
+		271B04801E889A2200F31CE0 /* JobSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
+		271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchTableViewCell.swift; sourceTree = "<group>"; };
+		272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchFunctions.swift; sourceTree = "<group>"; };
 		2759730B1E75E11E00DABF22 /* NonDev.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NonDev.storyboard; sourceTree = "<group>"; };
 		2759730E1E76073C00DABF22 /* CompanySizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanySizeViewController.swift; sourceTree = "<group>"; };
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
+		27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSizeViewController.swift; sourceTree = "<group>"; };
+		27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamAndRegionViewController.swift; sourceTree = "<group>"; };
 		42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A88A0D6D4AE765BF26386E /* Pods-DotCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5722C7EB1E4FFB4900A6EBFC /* DotCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				2709CCD91E7F4281001251C0 /* NewListingScrollViewController.swift */,
+				27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */,
+				27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */,
+				271B047B1E873B4300F31CE0 /* JobDescriptionViewController.swift */,
+				271B047D1E87407100F31CE0 /* NameListingViewController.swift */,
 			);
 			name = CreateListing;
 			sourceTree = "<group>";
@@ -130,6 +148,16 @@
 				270926C41E78D33500DE0E0F /* CreateListing */,
 			);
 			name = MianNavNon_Dev;
+			sourceTree = "<group>";
+		};
+		271B047F1E8899ED00F31CE0 /* Job Search */ = {
+			isa = PBXGroup;
+			children = (
+				271B04801E889A2200F31CE0 /* JobSearchViewController.swift */,
+				271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */,
+				272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */,
+			);
+			name = "Job Search";
 			sourceTree = "<group>";
 		};
 		2759730D1E75E53100DABF22 /* createAccount_nonDev */ = {
@@ -173,7 +201,6 @@
 				5722C7F01E4FFB4900A6EBFC /* ViewController.swift */,
 				5722C7F51E4FFB4900A6EBFC /* Assets.xcassets */,
 				5722C8021E4FFBA100A6EBFC /* Main.storyboard */,
-				751179751E6FA87D009F37F6 /* Profile.storyboard */,
 				751179731E6FA84D009F37F6 /* Client.storyboard */,
 				751179711E6FA821009F37F6 /* Projects.storyboard */,
 				7511796F1E6FA7B6009F37F6 /* Skill.storyboard */,
@@ -294,9 +321,11 @@
 		5755FFBF1E528E8200A2E1A6 /* main nav Developer */ = {
 			isa = PBXGroup;
 			children = (
+				271B047F1E8899ED00F31CE0 /* Job Search */,
 				5755FFC01E52914000A2E1A6 /* ProfileViewController.swift */,
 				57F959A11E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift */,
 				57AA421C1E68F113004476E5 /* ProfileViewCollectionReusableView.swift */,
+				751179751E6FA87D009F37F6 /* Profile.storyboard */,
 			);
 			name = "main nav Developer";
 			sourceTree = "<group>";
@@ -461,16 +490,22 @@
 				5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */,
 				2709CCDA1E7F4281001251C0 /* NewListingScrollViewController.swift in Sources */,
 				270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */,
+				271B047C1E873B4300F31CE0 /* JobDescriptionViewController.swift in Sources */,
 				5722C8151E50028F00A6EBFC /* GenericAccountCreateViewController.swift in Sources */,
 				5722C8131E50028F00A6EBFC /* SelectLocationViewController.swift in Sources */,
+				27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */,
 				5722C81A1E5002E000A6EBFC /* AddtoPortFolioViewController.swift in Sources */,
 				5722C8231E50032700A6EBFC /* PreviousClientTableViewCell.swift in Sources */,
 				57AA42221E6902C3004476E5 /* WelcomeScreenViewController.swift in Sources */,
 				5722C8241E50032700A6EBFC /* PreviousClientsViewController.swift in Sources */,
+				271B04811E889A2200F31CE0 /* JobSearchViewController.swift in Sources */,
 				57F959A21E5BDEED0005461F /* ProfileVidwCollectionViewCell.swift in Sources */,
 				5755FFC11E52914000A2E1A6 /* ProfileViewController.swift in Sources */,
+				27729D1B1E86CC330048FE4B /* ProjectSizeViewController.swift in Sources */,
+				272C7E471E89F1AA00763797 /* JobSearchFunctions.swift in Sources */,
 				2759730F1E76073C00DABF22 /* CompanySizeViewController.swift in Sources */,
 				5722C82A1E50035600A6EBFC /* EditSkillsTableViewController.swift in Sources */,
+				271B04831E889A8700F31CE0 /* JobSearchTableViewCell.swift in Sources */,
 				5722C80B1E50017A00A6EBFC /* Constants.swift in Sources */,
 				275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */,
 				5722C8141E50028F00A6EBFC /* TypeSelectViewController.swift in Sources */,
@@ -479,6 +514,7 @@
 				5722C81C1E5002E000A6EBFC /* AddPortfoliotCollectionReusableView.swift in Sources */,
 				5722C82B1E50035600A6EBFC /* EditSkillsTableViewCell.swift in Sources */,
 				5722C82C1E50035600A6EBFC /* skillsStruct.swift in Sources */,
+				271B047E1E87407100F31CE0 /* NameListingViewController.swift in Sources */,
 				5722C8081E50000F00A6EBFC /* Users.swift in Sources */,
 				5722C8321E50036900A6EBFC /* DescriptionViewController.swift in Sources */,
 				5722C8071E50000F00A6EBFC /* LoginViewController.swift in Sources */,

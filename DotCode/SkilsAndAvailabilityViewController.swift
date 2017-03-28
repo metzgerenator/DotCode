@@ -44,10 +44,18 @@ class SkilsAndAvailabilityViewController: UIViewController {
     
     @IBAction func saveActionButton(_ sender: Any) {
         
+        //Set user defaults 
+        let prefs = UserDefaults.standard
+        prefs.set(true, forKey: COMPLETEPROFILE)
+        prefs.set(DEVELOPER, forKey: USERTYPE)
+        
         
         if let userAvailability = userAvailability {
             
+            
             appendValues(values: [USERAVAILABILITY : userAvailability as AnyObject])
+            
+            appendValues(values: [COMPLETEPROFILE : "True" as AnyObject])
         }
         
         

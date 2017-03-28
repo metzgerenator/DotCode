@@ -12,18 +12,28 @@ class NewListingScrollViewController: UIViewController {
     
     
     var pages = [UIViewController]()
+    var jobPost = [String : AnyObject]()
+    
     
     
     @IBOutlet var scrollView: UIScrollView!
     
-    
-
     @IBOutlet var pageControllerOutlet: UIPageControl!
     
     
     @IBAction func pageControllerAction(_ sender: UIPageControl) {
         
-        let currentPage = sender.currentPage
+        turnPageController(page: sender.currentPage)
+        
+        
+    }
+    
+    
+    //add turn page function
+    
+    func turnPageController(page: Int) {
+        
+        let currentPage = page
         let pageWidth = scrollView.bounds.width
         let targetContentOffsetX = CGFloat(currentPage) * pageWidth
         
@@ -33,8 +43,6 @@ class NewListingScrollViewController: UIViewController {
             self.scrollView.contentOffset.x = targetContentOffsetX
         }
         
-        
-        
     }
 
     
@@ -43,22 +51,38 @@ class NewListingScrollViewController: UIViewController {
         
        scrollView.isPagingEnabled = true
         
-        let view1 = createStepController(storyBoardID: "project_size")
-        let view2 = createStepController(storyBoardID: "additional_questions")
-        let view3 = createStepController(storyBoardID: "additional_info")
+        guard let view1 = createStepController(storyBoardID: "project_size") as? ProjectSizeViewController else {return}
+        guard let view2 = createStepController(storyBoardID: "additional_questions") as? TeamAndRegionViewController else {return}
+        guard let view3 = createStepController(storyBoardID: "additional_info") as? JobDescriptionViewController else {return}
         
-        pages = [view1, view2, view3]
+       guard let view4 = createStepController(storyBoardID: "name_listing") as? NameListingViewController else {return}
+        
+        //delegates to self
+        view1.delegate = self
+        view2.delegate = self
+        view3.delegate = self
+        
+        //delegates for appending 
+        view1.addProjectDelegate = self
+        view2.addProjectDelegate = self
+        view3.addProjectDelegate = self
+        view4.addProjectDelegate = self
+        
+        //delegate for saving project
+        view4.saveProjectDelegate = self
+        
+        pages = [view1, view2, view3, view4]
         
         pageControllerOutlet.numberOfPages = pages.count
         
-        let views = ["view" : view, "page1" : view1.view, "page2" : view2.view, "page3" : view3.view]
+        let views = ["view" : view, "page1" : view1.view, "page2" : view2.view, "page3" : view3.view, "page4" : view4.view]
         
         let metrics = ["edgeMargin" : 10, "betweenMargin" : 20]
         
         let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[page1(==view)]|", options: .init(rawValue: 0), metrics: nil, views: views)
         NSLayoutConstraint.activate(verticalConstraints)
         
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-edgeMargin-[page1(==view)]-betweenMargin-[page2(==view)]-betweenMargin-[page3(==view)]-betweenMargin-|", options: [.alignAllTop, .alignAllBottom], metrics: metrics, views: views)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-edgeMargin-[page1(==view)]-betweenMargin-[page2(==view)]-betweenMargin-[page3(==view)]-betweenMargin-[page4(==view)]-betweenMargin-|", options: [.alignAllTop, .alignAllBottom], metrics: metrics, views: views)
         
         NSLayoutConstraint.activate(horizontalConstraints)
         
@@ -94,20 +118,32 @@ class NewListingScrollViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
 
 
-extension NewListingScrollViewController: UIScrollViewDelegate {
+extension NewListingScrollViewController: UIScrollViewDelegate, nextButtonDelegate, NewProjectDictionaryDelegate, SaveNewProjectDelegate {
+    
+    //save the job to firebase
+    internal func postJob() {
+        if jobPost.count > 0 {
+          postAJob(values: jobPost)
+        }
+        
+    }
+
+    //add to dictionary for job to be saved
+    internal func appendToProject(key: String, value: String) {
+        jobPost.updateValue(value as AnyObject, forKey: key)
+        
+    }
+
+    internal func buttonPressed(page: Int) {
+        turnPageController(page: page)
+    }
+
+
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.bounds.width
@@ -118,6 +154,30 @@ extension NewListingScrollViewController: UIScrollViewDelegate {
     
     
 }
+
+
+//MARK: delegates
+
+//add delegates for saving
+
+protocol nextButtonDelegate {
+    func buttonPressed(page: Int)
+}
+
+protocol NewProjectDictionaryDelegate{
+    
+    func appendToProject(key: String, value: String)
+}
+
+protocol SaveNewProjectDelegate {
+    func postJob()
+}
+
+
+
+
+
+
 
 
 

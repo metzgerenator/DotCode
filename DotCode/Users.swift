@@ -99,6 +99,8 @@ struct Developer {
     
     var developerSkills: [Skills]?
     
+    var completedProfile: Bool?
+    
     
     init() {
         
@@ -129,6 +131,21 @@ struct Developer {
                 
             }
             self.developerSkills = developerSkillsArray
+        }
+        
+        
+        
+        if let completedProfile = userdata[COMPLETEPROFILE] {
+            
+            guard let completed = completedProfile as? String else {return}
+            
+            
+            if completed == "True" {
+                
+                self.completedProfile = true
+            }
+            
+            
         }
         
         
@@ -324,17 +341,15 @@ func appendValues(values: Dictionary<String, AnyObject>) {
 }
 
 
+
 func appendDevSkils(values: Dictionary<String, AnyObject>) {
     
     if let user = FIRAuth.auth()?.currentUser {
         
         let ref = FIRDatabase.database().reference().child("users").child(user.uid).child(DEVELOPERSKILLS)
-        
-        
-      
+
         ref.updateChildValues(values)
-        
-        
+ 
         
     }
     
@@ -352,6 +367,30 @@ func appendCustomHeader(child: String, values: Dictionary<String, AnyObject>) {
     }
     
 }
+
+
+//MARK: add a new job POST 
+
+func postAJob(values: Dictionary<String, AnyObject>) {
+    
+    if let user = FIRAuth.auth()?.currentUser {
+        
+        
+        let refSub = FIRDatabase.database().reference().child("users").child(user.uid).child("Job_Posts").childByAutoId()
+        
+        refSub.updateChildValues(values)
+        
+        var refMainDic = values
+        refMainDic.updateValue(user.uid as AnyObject, forKey: "UID")
+        let refMain = FIRDatabase.database().reference().child("Job_Posts").childByAutoId()
+        refMain.updateChildValues(refMainDic)
+        
+        
+    }
+    
+}
+
+
 
 
 //MARK: Authentication State listener and user attributes

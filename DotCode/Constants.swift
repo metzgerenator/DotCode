@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 
+//User profile complete 
+let COMPLETEPROFILE = "completed_profile"
+
 //company types new ones
 
 let USERTYPE = "user_type"
@@ -72,6 +75,26 @@ let developer = "developers"
 var currentUserDevType: String?
 
 
+
+
+
+//Client Job creatin 
+
+let JOBSIZE = "Job Size"
+let WEBAPP = "Web App"
+let APP = "App"
+let WEBSITE = "Web Site"
+
+//Client required locations 
+
+let SAMECITY = "same city"
+let SAMEREGION = "same region"
+let ANYWHERE = "anywhere"
+
+//jobpost name 
+let JOBPOSTNAME = "Job Post Name"
+
+let JOBPOSTDATE = "Post Date"
 
 
 extension Date {
