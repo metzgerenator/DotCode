@@ -18,26 +18,26 @@ struct Job {
     var jobPostName: String?
     var jobSize: String?
     var location: String?
-    var postDate: Date?
+    var postDate: String?
     var uId: String?
     var companySize: String?
     
+    init() {
+        
+    }
+    
     
 }
 
-struct allJobs {
-    
-    var currentJobs: [Job]?
-}
 
 
-func currentJobPostings(completion: @escaping (allJobs) -> Void) {
+func currentJobPostings(completion: @escaping ([Job]) -> Void) {
     
     //guard let userId = FIRAuth.auth()?.currentUser?.uid else {return}
     
     let ref = FIRDatabase.database().reference().child("Job_Posts")
     
-    
+    var allJobs = [Job]()
     ref.observe(.value, with: { (snapshot) in
         
         //guard let JobDic = snapshot.value as? NSDictionary else { return }
@@ -47,12 +47,49 @@ func currentJobPostings(completion: @escaping (allJobs) -> Void) {
         let json = JSON(postDict)
         
         for (key,subJson):(String, JSON) in json {
-            
+            var job = Job()
+            job.jobKey = key
             if let jobDescription = subJson[PROJECTDESCRIPTION].string {
-                print("here is description \(jobDescription)")
+                
+                job.description = jobDescription
             }
+            
+            if let jobPostName = subJson[JOBPOSTNAME].string {
+                
+                job.jobPostName = jobPostName
+                
+            }
+            
+            if let jobPostSize = subJson[JOBSIZE].string {
+                
+                job.jobSize = jobPostSize
+  
+            }
+            if let jobLocation = subJson[USERLOCATION].string {
+                
+                job.location = jobLocation
+            }
+            
+            if let jobPostDate = subJson[JOBPOSTDATE].string {
+                
+                job.postDate = jobPostDate
+            }
+            
+            if let posterID = subJson["UID"].string {
+                job.uId = posterID
+
+            }
+            
+            if let requiredSize = subJson[COMPANYSIZE].string {
+                
+                job.companySize = requiredSize
+                
+            }
+            
+           allJobs.append(job)
         }
- 
+        
+        completion(allJobs)
         
     })
     

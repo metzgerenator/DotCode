@@ -19,6 +19,8 @@ class JobSearchViewController: UIViewController {
         
         currentJobPostings { (Job) in
             
+            print("total jobs \(Job)")
+            
         }
 
     }
