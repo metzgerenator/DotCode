@@ -22,9 +22,7 @@ struct Job {
     var uId: String?
     var companySize: String?
     
-    init() {
-        
-    }
+    init() {}
     
     
 }
@@ -33,14 +31,11 @@ struct Job {
 
 func currentJobPostings(completion: @escaping ([Job]) -> Void) {
     
-    //guard let userId = FIRAuth.auth()?.currentUser?.uid else {return}
     
     let ref = FIRDatabase.database().reference().child("Job_Posts")
     
     var allJobs = [Job]()
     ref.observe(.value, with: { (snapshot) in
-        
-        //guard let JobDic = snapshot.value as? NSDictionary else { return }
         
         let postDict = snapshot.value as? [String : AnyObject] ?? [:]
         

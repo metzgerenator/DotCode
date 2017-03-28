@@ -27,7 +27,20 @@ class JobSearchTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+    
+    
+    func configureCell(job: Job) {
+        
+        
+        descriptionLabel.text = job.description ?? "none"
+        //add studio name
+       studioNameLabel.text = "none"
+        numberOfDaysAgo.text = job.postDate ?? "none"
+        
+        
+    }
+    
+    
 
 }

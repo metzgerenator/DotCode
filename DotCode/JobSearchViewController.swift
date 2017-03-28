@@ -10,6 +10,7 @@ import UIKit
 
 class JobSearchViewController: UIViewController {
     
+    var allJobs = [Job]()
     
     @IBOutlet var tableView: UITableView!
     
@@ -19,8 +20,9 @@ class JobSearchViewController: UIViewController {
         
         currentJobPostings { (Job) in
             
-            print("total jobs \(Job)")
-            
+            self.allJobs = Job
+            self.tableView.reloadData()
+
         }
 
     }
@@ -38,7 +40,7 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return allJobs.count
     
     }
     
@@ -49,6 +51,8 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as! JobSearchTableViewCell
         
+        let currentJob = allJobs[indexPath.row]
+        cell.configureCell(job: currentJob)
         
         return cell
     }
