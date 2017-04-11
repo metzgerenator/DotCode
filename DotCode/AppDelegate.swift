@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        } catch let signOutError as NSError {
 //            print ("Error signing out: %@", signOutError)
 //        }
-        
+//        
         //switch root view controller if user is client and completed profile
         
         if let complete = prefs.value(forKey: COMPLETEPROFILE) as? Bool, let userType = prefs.value(forKey: USERTYPE) as? String {

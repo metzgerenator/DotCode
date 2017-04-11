@@ -29,12 +29,11 @@ struct Job {
 
 
 
-func currentJobPostings(completion: @escaping ([Job]) -> Void) {
+func currentJobPostings(completion: @escaping (Job) -> Void) {
     
     
     let ref = FIRDatabase.database().reference().child("Job_Posts")
     
-    var allJobs = [Job]()
     ref.observe(.value, with: { (snapshot) in
         
         let postDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -81,10 +80,11 @@ func currentJobPostings(completion: @escaping ([Job]) -> Void) {
                 
             }
             
-           allJobs.append(job)
+             completion(job)
+            
         }
         
-        completion(allJobs)
+        
         
     })
     
