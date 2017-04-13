@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I6O-yf-IFj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I6O-yf-IFj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,25 +43,25 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brooklyn, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edv-Ke-5cZ">
-                                        <rect key="frame" x="0.0" y="32" width="343" height="21"/>
+                                        <rect key="frame" x="0.0" y="32" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.56075114011764526" green="0.55643361806869507" blue="0.58121949434280396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="website.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26Y-n2-s3v">
-                                        <rect key="frame" x="0.0" y="61" width="343" height="16"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="343" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.34159326553344727" green="0.45684331655502319" blue="0.93480527400970459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-lo-4pe">
-                                        <rect key="frame" x="0.0" y="85" width="343" height="21"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.59996294975280762" green="0.59565234184265137" blue="0.62043207883834839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Ios Developer in Brooklyn ready to work on whatever interesting projects you throw my way!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4O-2x-13H">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="20"/>
+                                        <rect key="frame" x="0.0" y="113" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.59996294979999998" green="0.59565234180000004" blue="0.62043207879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -218,7 +218,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogw-vI-XWu" id="wth-FJ-I9A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0l8-wI-ZF2">
@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="4928.8000000000002" y="964.76761619190415"/>
         </scene>
-        <!--View Controller-->
+        <!--Job Filter View Controller-->
         <scene sceneID="zmP-NY-hwd">
             <objects>
-                <viewController id="yQK-wV-eNU" sceneMemberID="viewController">
+                <viewController id="yQK-wV-eNU" customClass="JobFilterViewController" customModule="DotCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7qw-4V-TlQ"/>
                         <viewControllerLayoutGuide type="bottom" id="6wv-cF-Dgx"/>
@@ -328,6 +328,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCR-VM-LGl">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
                                         <state key="normal" title="Distance "/>
+                                        <connections>
+                                            <action selector="distanceFilter:" destination="yQK-wV-eNU" eventType="touchUpInside" id="0ap-Bb-VuD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtH-w2-QMg">
                                         <rect key="frame" x="114" y="0.0" width="70" height="30"/>
@@ -371,8 +374,21 @@
                             <constraint firstItem="Y6C-fG-MwN" firstAttribute="centerX" secondItem="32J-q2-29U" secondAttribute="centerX" id="zhr-jg-eop"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="E1C-SQ-XLK">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="G9T-NM-Zo4">
+                            <connections>
+                                <action selector="doneButton:" destination="yQK-wV-eNU" id="8kQ-qm-2Ud"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="DV6-9Q-9Yu" kind="unwind" identifier="filter" unwindAction="unwindFromFilterWithSegue:" id="SgS-xM-gVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vq-Yn-LHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DV6-9Q-9Yu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5702" y="964"/>
         </scene>

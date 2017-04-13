@@ -14,6 +14,17 @@ class JobSearchViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    
+    @IBAction func unwindFromFilter(segue: UIStoryboardSegue) {
+        
+        if segue.identifier == "filter" {
+            
+            print("filtering")
+            
+        }
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,3 +75,17 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
 }
+
+
+
+extension JobSearchViewController {
+    
+    //filter function
+    
+}
+
+
+
+
+
+

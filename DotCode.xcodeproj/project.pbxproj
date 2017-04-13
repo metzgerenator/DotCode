@@ -20,6 +20,7 @@
 		275973111E7639B300DABF22 /* ClientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */; };
 		27729D1B1E86CC330048FE4B /* ProjectSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */; };
 		27729D1D1E86DE2E0048FE4B /* TeamAndRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */; };
+		277CC50B1E9F3018008018F9 /* JobFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC50A1E9F3018008018F9 /* JobFilterViewController.swift */; };
 		519F4AD64688B9AB778E5BD2 /* Pods_DotCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */; };
 		5722C7EF1E4FFB4900A6EBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7EE1E4FFB4900A6EBFC /* AppDelegate.swift */; };
 		5722C7F11E4FFB4900A6EBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722C7F01E4FFB4900A6EBFC /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		275973101E7639B300DABF22 /* ClientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDescriptionViewController.swift; sourceTree = "<group>"; };
 		27729D1A1E86CC330048FE4B /* ProjectSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSizeViewController.swift; sourceTree = "<group>"; };
 		27729D1C1E86DE2E0048FE4B /* TeamAndRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamAndRegionViewController.swift; sourceTree = "<group>"; };
+		277CC50A1E9F3018008018F9 /* JobFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobFilterViewController.swift; sourceTree = "<group>"; };
 		42DEAE05E75B71F0047E421C /* Pods_DotCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A88A0D6D4AE765BF26386E /* Pods-DotCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotCode/Pods-DotCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5722C7EB1E4FFB4900A6EBFC /* DotCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +158,7 @@
 				271B04801E889A2200F31CE0 /* JobSearchViewController.swift */,
 				271B04821E889A8700F31CE0 /* JobSearchTableViewCell.swift */,
 				272C7E461E89F1AA00763797 /* JobSearchFunctions.swift */,
+				277CC50A1E9F3018008018F9 /* JobFilterViewController.swift */,
 			);
 			name = "Job Search";
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277CC50B1E9F3018008018F9 /* JobFilterViewController.swift in Sources */,
 				5755FFBD1E51038600A2E1A6 /* SubSkillsTableViewController.swift in Sources */,
 				2709CCDA1E7F4281001251C0 /* NewListingScrollViewController.swift in Sources */,
 				270926C81E78E44500DE0E0F /* ClientSummaryViewController.swift in Sources */,
