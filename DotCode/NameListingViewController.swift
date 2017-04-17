@@ -22,6 +22,14 @@ class NameListingViewController: UIViewController {
             //append name of job
             addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
             addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date())")
+            
+            let coordinates = getPoints()
+            if coordinates.latitude != 0 {
+                addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(coordinates.longitude)")
+                addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(coordinates.latitude)")
+                
+            }
+            
             //save project
             saveProjectDelegate?.postJob()
 
@@ -30,6 +38,24 @@ class NameListingViewController: UIViewController {
         
         
        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    //get user's geo location 
+    
+    func getPoints() -> (longitude: NSNumber, latitude: NSNumber) {
+        //need to correctly get user
+        let user = Developer()
+        print("here is user \(user)")
+        if let long = user.longitude, let lat = user.latitude {
+            
+            return (long, lat)
+        } else {
+            
+            return (0, 0)
+        }
+        
     }
     
     

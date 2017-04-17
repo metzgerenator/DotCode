@@ -101,6 +101,10 @@ struct Developer {
     
     var completedProfile: Bool?
     
+    var latitude: NSNumber?
+    
+    var longitude: NSNumber?
+    
     
     init() {
         
@@ -144,6 +148,16 @@ struct Developer {
                 
                 self.completedProfile = true
             }
+            
+            
+        }
+        
+        if let longitude = userdata[USERLONGITUDE], let latitude = userdata[USERLATITUED]{
+            
+            self.longitude = longitude as? NSNumber
+            self.latitude = latitude as! NSNumber
+        
+            print("here is long lat \(self.longitude), \(self.latitude)")
             
             
         }
