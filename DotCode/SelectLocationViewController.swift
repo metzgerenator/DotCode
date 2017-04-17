@@ -22,7 +22,8 @@ class SelectLocationViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-   var locatons = [String]()
+    var locatons = [String]()
+    var cLocations = [CLLocationCoordinate2D]()
     
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.isNavigationBarHidden = true
@@ -90,17 +91,20 @@ extension SelectLocationViewController: UISearchBarDelegate {
                 guard let results = response else { return }
                 
                 var forLocations = [String]()
+                var currentCLocations = [CLLocationCoordinate2D]()
                 
                 for mapItem in results.mapItems {
                     
                     let cpMark = mapItem.placemark as CLPlacemark
                     let addressAtributes = cpMark.addressDictionary
+                    let currentCoordinate = mapItem.placemark.coordinate
                     
                     if let city = addressAtributes?["City"], let state = addressAtributes?["State"] {
                         
                         let locationToAdd = "\(city), \(state)"
                         let alreadyIn = forLocations.contains{$0 == locationToAdd}
                         if !alreadyIn {
+                            currentCLocations.append(currentCoordinate)
                             forLocations.append(locationToAdd)
                         }
 
@@ -108,6 +112,7 @@ extension SelectLocationViewController: UISearchBarDelegate {
       
                 }
                 
+                self.cLocations = currentCLocations
                 self.locatons = forLocations
                 self.tableView.reloadData()
  
@@ -146,8 +151,12 @@ extension SelectLocationViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let location = locatons[indexPath.row]
+        let cordinate = cLocations[indexPath.row]
         
-        appendValues(values: [USERLOCATION : location as AnyObject] )
+        let latitude = cordinate.latitude
+        let longitude = cordinate.longitude
+        
+        appendValues(values: [USERLOCATION : location as AnyObject, USERLATITUED : latitude as AnyObject, USERLONGITUDE : longitude as AnyObject ] )
         
         self.performSegue(withIdentifier: "dev", sender: self)
    
