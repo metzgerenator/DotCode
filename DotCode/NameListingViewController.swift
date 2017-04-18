@@ -12,7 +12,7 @@ class NameListingViewController: UIViewController {
     
     var addProjectDelegate: NewProjectDictionaryDelegate?
     var saveProjectDelegate: SaveNewProjectDelegate?
-    
+
 
     
     @IBOutlet var projectNameOutlet: UITextField!
