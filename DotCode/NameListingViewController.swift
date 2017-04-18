@@ -22,18 +22,9 @@ class NameListingViewController: UIViewController {
         if (projectNameOutlet.text?.characters.count)! > 0 {
             //append name of job
             addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
-            addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date())")
+            addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date().timeIntervalSince1970)")
             
-            let user = CurrentUser()
-            user.userAttributes { (user) in
-                if let long = user.longitude, let lat = user.latitude {
-                    
-                    self.addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(long)")
-                    self.addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(lat)")
-                    
-                }
-        
-            }
+            
             self.saveProjectDelegate?.postJob()
             self.dismiss(animated: true, completion: nil)
         }
@@ -43,6 +34,17 @@ class NameListingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = CurrentUser()
+        user.userAttributes { (user) in
+            if let long = user.longitude, let lat = user.latitude {
+                
+                self.addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(long)")
+                self.addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(lat)")
+                
+            }
+            
+        }
 
         // Do any additional setup after loading the view.
     }
