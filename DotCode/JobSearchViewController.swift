@@ -29,18 +29,20 @@ class JobSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentJobPostings { (Job) in
-            
-            
-            let check = self.allJobs.contains{$0.jobKey == Job.jobKey}
-            if (!check) {
-                self.allJobs.append(Job)
-                self.tableView.reloadData()
-            }
-            
-            
-
-        }
+        currentJobPostings()
+        
+//        currentJobPostings { (Job) in
+//            
+//            
+//            let check = self.allJobs.contains{$0.jobKey == Job.jobKey}
+//            if (!check) {
+//                self.allJobs.append(Job)
+//                self.tableView.reloadData()
+//            }
+//            
+//            
+//
+//        }
 
     }
 
