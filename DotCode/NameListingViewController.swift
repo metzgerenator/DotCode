@@ -12,6 +12,7 @@ class NameListingViewController: UIViewController {
     
     var addProjectDelegate: NewProjectDictionaryDelegate?
     var saveProjectDelegate: SaveNewProjectDelegate?
+    
 
     
     @IBOutlet var projectNameOutlet: UITextField!
@@ -23,42 +24,23 @@ class NameListingViewController: UIViewController {
             addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
             addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date())")
             
-            let coordinates = getPoints()
-            if coordinates.latitude != 0 {
-                addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(coordinates.longitude)")
-                addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(coordinates.latitude)")
-                
+            let user = CurrentUser()
+            user.userAttributes { (user) in
+                if let long = user.longitude, let lat = user.latitude {
+                    
+                    self.addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(long)")
+                    self.addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(lat)")
+                    
+                }
+        
             }
-            
-            //save project
-            saveProjectDelegate?.postJob()
+            self.saveProjectDelegate?.postJob()
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
 
-        }
-        
-        
-        
-       self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    //get user's geo location 
-    
-    func getPoints() -> (longitude: NSNumber, latitude: NSNumber) {
-        //need to correctly get user
-        let user = Developer()
-        print("here is user \(user)")
-        if let long = user.longitude, let lat = user.latitude {
-            
-            return (long, lat)
-        } else {
-            
-            return (0, 0)
-        }
-        
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
