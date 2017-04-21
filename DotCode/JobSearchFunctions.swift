@@ -43,6 +43,9 @@ extension JobSearchViewController {
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             
             let json = JSON(postDict)
+            var serverJobs = [Job]()
+            // may need to equal nil 
+            
             
             for (key,subJson):(String, JSON) in json {
                 var job = Job()
@@ -84,82 +87,16 @@ extension JobSearchViewController {
                     
                 }
                 
-                let check = self.allJobs.contains{$0.jobKey == job.jobKey}
-                if (!check) {
-                    self.allJobs.append(job)
-                    self.tableView.reloadData()
-                }
-                if json.count != self.allJobs.count{
-                    
-                    print("time to remove")
-                }
-                
+                serverJobs.append(job)
                 
             }
+            
+            self.allJobs = serverJobs
+            self.tableView.reloadData()
         })
         
     }
     
 }
 
-//func currentJobPostings(completion: @escaping (Job) -> Void) {
-//    
-//    
-//    let ref = FIRDatabase.database().reference().child("Job_Posts")
-//    
-//    ref.observe(.value, with: { (snapshot) in
-//        
-//        let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-//        
-//        let json = JSON(postDict)
-//        
-//        for (key,subJson):(String, JSON) in json {
-//            var job = Job()
-//            job.jobKey = key
-//            if let jobDescription = subJson[PROJECTDESCRIPTION].string {
-//                
-//                job.description = jobDescription
-//            }
-//            
-//            if let jobPostName = subJson[JOBPOSTNAME].string {
-//                
-//                job.jobPostName = jobPostName
-//                
-//            }
-//            
-//            if let jobPostSize = subJson[JOBSIZE].string {
-//                
-//                job.jobSize = jobPostSize
-//  
-//            }
-//            if let jobLocation = subJson[USERLOCATION].string {
-//                
-//                job.location = jobLocation
-//            }
-//            
-//            if let jobPostDate = subJson[JOBPOSTDATE].string {
-//                
-//                job.postDate = jobPostDate
-//            }
-//            
-//            if let posterID = subJson["UID"].string {
-//                job.uId = posterID
-//
-//            }
-//            
-//            if let requiredSize = subJson[COMPANYSIZE].string {
-//                
-//                job.companySize = requiredSize
-//                
-//            }
-//            
-//             completion(job)
-//            
-//        }
-//        
-//        
-//        
-//    })
-//    
-//}
 
