@@ -101,9 +101,9 @@ struct Developer {
     
     var completedProfile: Bool?
     
-    var latitude: String?
+    var latitude: NSNumber?
     
-    var longitude: String?
+    var longitude: NSNumber?
     
     var userLocation: CLLocation?
     
@@ -155,25 +155,20 @@ struct Developer {
         }
         
         if let longitude = userdata[USERLONGITUDE], let latitude = userdata[USERLATITUED]{
+            print("here's longituded \(longitude), here's latitude \(latitude)")
             
-            guard let lat = latitude as? String else {return}
-            guard let lon = longitude as? String else {return}
+            guard let lat = latitude as? NSNumber else {return}
+            guard let lon = longitude as? NSNumber else {return}
             
             self.longitude = lat
             self.latitude = lon
             
-            if let latNumber = Double(lat), let lonNumber = Double(lon) {
-                
-                self.userLocation = CLLocation(latitude: latNumber, longitude: lonNumber)
-            }
+            let latNumber = Double(lat)
+            let lonNumber = Double(lon)
             
-//            self.longitude = longitude as? NSNumber
-//            self.latitude = latitude as? NSNumber
-
-        
-            print("here is long lat \(String(describing: self.longitude)), \(String(describing: self.latitude))")
+            self.userLocation = CLLocation(latitude: latNumber, longitude: lonNumber)
             
-            
+     
         }
         
         
