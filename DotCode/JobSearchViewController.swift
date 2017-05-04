@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class JobSearchViewController: UIViewController {
     
@@ -19,11 +20,8 @@ class JobSearchViewController: UIViewController {
         
         if segue.identifier == "filter" {
             //sortfunction
-
             sortByDistance()
-            
         }
-        
     }
     
 
@@ -32,8 +30,15 @@ class JobSearchViewController: UIViewController {
         
         currentJobPostings()
         
-
-
+        //get user location 
+        let user = CurrentUser.init()
+        user.userAttributes { (Developer) in
+            print("developer \(Developer)")
+            print("user cllocaton \(String(describing: Developer.userLocation))")
+            
+            
+        }
+  
     }
 
  

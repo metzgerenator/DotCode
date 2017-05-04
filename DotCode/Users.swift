@@ -7,7 +7,7 @@
 
 import Foundation
 import Firebase
-
+import CoreLocation
 
 
 
@@ -101,9 +101,11 @@ struct Developer {
     
     var completedProfile: Bool?
     
-    var latitude: NSNumber?
+    var latitude: String?
     
-    var longitude: NSNumber?
+    var longitude: String?
+    
+    var userLocation: CLLocation?
     
     
     init() {
@@ -154,10 +156,22 @@ struct Developer {
         
         if let longitude = userdata[USERLONGITUDE], let latitude = userdata[USERLATITUED]{
             
-            self.longitude = longitude as? NSNumber
-            self.latitude = latitude as! NSNumber
+            guard let lat = latitude as? String else {return}
+            guard let lon = longitude as? String else {return}
+            
+            self.longitude = lat
+            self.latitude = lon
+            
+            if let latNumber = Double(lat), let lonNumber = Double(lon) {
+                
+                self.userLocation = CLLocation(latitude: latNumber, longitude: lonNumber)
+            }
+            
+//            self.longitude = longitude as? NSNumber
+//            self.latitude = latitude as? NSNumber
+
         
-            print("here is long lat \(self.longitude), \(self.latitude)")
+            print("here is long lat \(String(describing: self.longitude)), \(String(describing: self.latitude))")
             
             
         }
@@ -443,7 +457,7 @@ struct CurrentUser  {
         
                 } else {
                     
-                    print("error occured \(error)")
+                    print("error occured \(String(describing: error))")
                     
                 }
                 

@@ -43,6 +43,8 @@ extension JobSearchViewController {
     
     func currentJobPostings(){
         
+        //get users long and lat 
+        
         
         let ref = FIRDatabase.database().reference().child("Job_Posts")
         
