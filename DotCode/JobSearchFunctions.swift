@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import SwiftyJSON
+import CoreLocation
 
 
 
@@ -23,11 +24,18 @@ struct Job {
     var companySize: String?
     //add latitude and longitude 
     
+    var longitude: String?
+    var latitude: String?
+    
+    var distanceFromUser: CLLocation?
+    
     
     init() {}
     
     
 }
+
+// listen for job listings and changes
 
 extension JobSearchViewController {
     
@@ -50,6 +58,20 @@ extension JobSearchViewController {
             for (key,subJson):(String, JSON) in json {
                 var job = Job()
                 job.jobKey = key
+                
+                
+                if let lon = subJson[USERLONGITUDE].string, let lat = subJson[USERLATITUED].string {
+                    
+                    job.longitude = lon
+                    job.latitude = lat
+                    
+//                    let longitudeFlot = Float
+//                    
+//                    let corrdinate = CLLocation(latitude: <#T##CLLocationDegrees#>, longitude: <#T##CLLocationDegrees#>)
+                    
+                }
+                
+                
                 if let jobDescription = subJson[PROJECTDESCRIPTION].string {
                     
                     job.description = jobDescription

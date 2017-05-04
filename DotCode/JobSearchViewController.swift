@@ -18,8 +18,9 @@ class JobSearchViewController: UIViewController {
     @IBAction func unwindFromFilter(segue: UIStoryboardSegue) {
         
         if segue.identifier == "filter" {
-            
-            print("filtering")
+            //sortfunction
+
+            sortByDistance()
             
         }
         
@@ -31,18 +32,7 @@ class JobSearchViewController: UIViewController {
         
         currentJobPostings()
         
-//        currentJobPostings { (Job) in
-//            
-//            
-//            let check = self.allJobs.contains{$0.jobKey == Job.jobKey}
-//            if (!check) {
-//                self.allJobs.append(Job)
-//                self.tableView.reloadData()
-//            }
-//            
-//            
-//
-//        }
+
 
     }
 
@@ -78,13 +68,29 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 
-
+//MARK: convienece methods 
 
 extension JobSearchViewController {
     
-    //filter function
+    // pull users long and lat
+    
+    // sort function 
+    
+    //create new sorted array and reload 
+    
+    func sortByDistance() {
+        
+        for job in allJobs {
+            
+            print("job latitude is \(String(describing: job.longitude)), job lat is \(String(describing: job.latitude))")
+        }
+        
+    }
+    
     
 }
+
+
 
 
 
