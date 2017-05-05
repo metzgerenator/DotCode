@@ -12,6 +12,7 @@ import CoreLocation
 class JobSearchViewController: UIViewController {
     
     var allJobs = [Job]()
+    var currentUSerLocation: CLLocation?
     
     @IBOutlet var tableView: UITableView!
     
@@ -28,14 +29,15 @@ class JobSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentJobPostings()
+        
         
         //get user location 
         let user = CurrentUser.init()
         user.userAttributes { (Developer) in
-            print("developer \(Developer)")
-            print("user cllocaton \(String(describing: Developer.userLocation))")
+            guard let userCordinates = Developer.userLocation else {return}
             
+            self.currentUSerLocation = userCordinates
+            self.currentJobPostings()
             
         }
   
@@ -87,7 +89,7 @@ extension JobSearchViewController {
         
         for job in allJobs {
             
-            print("job latitude is \(String(describing: job.longitude)), job lat is \(String(describing: job.latitude))")
+            print("distance from me \(String(describing: job.distanceToJob))")
         }
         
     }

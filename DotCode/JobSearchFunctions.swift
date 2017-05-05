@@ -27,7 +27,7 @@ struct Job {
     var longitude: String?
     var latitude: String?
     
-    var distanceFromUser: CLLocation?
+    var distanceToJob: CLLocationDistance?
     
     
     init() {}
@@ -54,9 +54,7 @@ extension JobSearchViewController {
             
             let json = JSON(postDict)
             var serverJobs = [Job]()
-            // may need to equal nil 
-            
-            
+        
             for (key,subJson):(String, JSON) in json {
                 var job = Job()
                 job.jobKey = key
@@ -67,10 +65,15 @@ extension JobSearchViewController {
                     job.longitude = lon
                     job.latitude = lat
                     
-//                    let longitudeFlot = Float
-//                    
-//                    let corrdinate = CLLocation(latitude: <#T##CLLocationDegrees#>, longitude: <#T##CLLocationDegrees#>)
+                   let coordinate = CLLocation(latitude: Double(lat)!, longitude: Double(lon)!)
+                    if let userCllocation = self.currentUSerLocation {
+                    job.distanceToJob = userCllocation.distance(from: coordinate)
+                        
+                        
+                    }
                     
+                    
+                
                 }
                 
                 
