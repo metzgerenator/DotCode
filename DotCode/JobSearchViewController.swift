@@ -15,6 +15,9 @@ class JobSearchViewController: UIViewController {
     var currentUSerLocation: CLLocation?
     //filter options 
     
+    @IBOutlet var jobNumber: UILabel!
+    
+    
     var filterByDistance = false
     
     @IBOutlet var tableView: UITableView!

@@ -119,8 +119,9 @@ extension JobSearchViewController {
             }
             
             self.allJobs = serverJobs
+            self.jobNumber.text = "\(self.allJobs.count)"
             
-            filterOKCheck()
+            self.filterOKCheck()
             self.tableView.reloadData()
         })
         

@@ -211,7 +211,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-9E-rgK">
-                                <rect key="frame" x="0.0" y="195" width="375" height="423"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="101" id="ogw-vI-XWu" customClass="JobSearchTableViewCell" customModule="DotCode" customModuleProvider="target">
@@ -278,15 +278,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-oy-jvv">
+                                <rect key="frame" x="16" y="64" width="343" height="29"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="New "/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SUl-yK-EWx" firstAttribute="top" secondItem="NeQ-9E-rgK" secondAttribute="bottom" id="7BL-W8-veA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DjP-oy-jvv" secondAttribute="trailing" id="COp-ot-sum"/>
+                            <constraint firstItem="DjP-oy-jvv" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" id="DgK-jT-Aat"/>
+                            <constraint firstItem="DjP-oy-jvv" firstAttribute="leading" secondItem="3bY-vm-TkX" secondAttribute="leadingMargin" id="EP8-IR-WVE"/>
                             <constraint firstItem="2fQ-Kx-rqi" firstAttribute="leading" secondItem="3bY-vm-TkX" secondAttribute="leadingMargin" id="K9b-A8-OI5"/>
                             <constraint firstItem="2fQ-Kx-rqi" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" constant="39" id="V8n-mv-Sfb"/>
                             <constraint firstItem="NeQ-9E-rgK" firstAttribute="leading" secondItem="3bY-vm-TkX" secondAttribute="leading" id="pq2-4n-gaG"/>
                             <constraint firstAttribute="trailing" secondItem="NeQ-9E-rgK" secondAttribute="trailing" id="trA-OR-avB"/>
-                            <constraint firstItem="NeQ-9E-rgK" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" constant="131" id="u8f-rP-XWk"/>
+                            <constraint firstItem="NeQ-9E-rgK" firstAttribute="top" secondItem="D0d-XB-QzY" secondAttribute="bottom" constant="80" id="u8f-rP-XWk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="TPg-ve-DAW">
@@ -297,6 +307,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="jobNumber" destination="2fQ-Kx-rqi" id="X0w-WE-hlo"/>
                         <outlet property="tableView" destination="NeQ-9E-rgK" id="t1m-R6-s5y"/>
                     </connections>
                 </viewController>
