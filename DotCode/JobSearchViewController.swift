@@ -15,12 +15,31 @@ class JobSearchViewController: UIViewController {
     var currentUSerLocation: CLLocation?
     //filter options 
     
+    
+    
+    
     @IBOutlet var jobNumber: UILabel!
     
     
     var filterByDistance = false
     
     @IBOutlet var tableView: UITableView!
+    
+    @IBAction func allNewSelect(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+
+            self.tableView.reloadData()
+            
+        } else {
+            
+            sortByTime()
+   
+        }
+        
+    }
+    
+    
     
     
     @IBAction func unwindFromFilter(segue: UIStoryboardSegue) {
@@ -100,6 +119,12 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
 //MARK: convienece methods 
 
 extension JobSearchViewController {
+    
+    func sortByTime() {
+        self.allJobs = allJobs.sorted(by: { Float($0.postDate!)! < Float($1.postDate!)!} )
+        self.tableView.reloadData()
+        
+    }
     
     
     func sortByDistance() {
