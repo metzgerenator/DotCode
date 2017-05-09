@@ -119,6 +119,8 @@ extension JobSearchViewController {
             }
             
             self.allJobs = serverJobs
+            
+            filterOKCheck()
             self.tableView.reloadData()
         })
         

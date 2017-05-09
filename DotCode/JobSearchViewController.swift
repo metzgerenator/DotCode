@@ -13,6 +13,9 @@ class JobSearchViewController: UIViewController {
     
     var allJobs = [Job]()
     var currentUSerLocation: CLLocation?
+    //filter options 
+    
+    var filterByDistance = false
     
     @IBOutlet var tableView: UITableView!
     
@@ -21,7 +24,23 @@ class JobSearchViewController: UIViewController {
         
         if segue.identifier == "filter" {
             //sortfunction
+            
+            filterOKCheck()
+            
+        }
+    }
+    
+    
+    
+    
+    func filterOKCheck() {
+        
+        if (!filterByDistance) {
+            filterByDistance = true
             sortByDistance()
+        } else {
+            
+            filterByDistance = false
         }
     }
     
@@ -79,19 +98,14 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension JobSearchViewController {
     
-    // pull users long and lat
-    
-    // sort function 
-    
-    //create new sorted array and reload 
     
     func sortByDistance() {
         
-        for job in allJobs {
-            
-            print("distance from me \(String(describing: job.distanceToJob))")
-        }
+       
+        self.allJobs = allJobs.sorted(by: {$0.distanceToJob! > $1.distanceToJob!} )
         
+        self.tableView.reloadData()
+
     }
     
     
