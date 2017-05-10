@@ -20,21 +20,22 @@ class JobSearchViewController: UIViewController {
     
     @IBOutlet var jobNumber: UILabel!
     
-    
+    // filter controls on
     var filterByDistance = false
+    var timeSort = false
     
     @IBOutlet var tableView: UITableView!
     
     @IBAction func allNewSelect(_ sender: UISegmentedControl) {
         
-        if sender.selectedSegmentIndex == 0 {
+        if sender.selectedSegmentIndex == 1 {
 
+            sortByTime()
+            timeSort = true
             self.tableView.reloadData()
             
         } else {
-            
-            sortByTime()
-   
+            timeSort = false
         }
         
     }
@@ -57,6 +58,8 @@ class JobSearchViewController: UIViewController {
     
     func filterOKCheck() {
         
+        //add sort by time function
+        
         if (!filterByDistance) {
             filterByDistance = true
             sortByDistance()
@@ -64,6 +67,7 @@ class JobSearchViewController: UIViewController {
             
             filterByDistance = false
         }
+        
     }
     
 
@@ -121,6 +125,7 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
 extension JobSearchViewController {
     
     func sortByTime() {
+        
         self.allJobs = allJobs.sorted(by: { Float($0.postDate!)! < Float($1.postDate!)!} )
         self.tableView.reloadData()
         
