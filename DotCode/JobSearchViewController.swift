@@ -126,7 +126,7 @@ extension JobSearchViewController {
     
     func sortByTime() {
         
-        self.allJobs = allJobs.sorted(by: { Float($0.postDate!)! < Float($1.postDate!)!} )
+        self.allJobs = allJobs.sorted(by: { Float($0.postDate!)! > Float($1.postDate!)!} )
         self.tableView.reloadData()
         
     }
