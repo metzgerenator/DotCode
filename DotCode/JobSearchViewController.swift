@@ -76,17 +76,13 @@ class JobSearchViewController: UIViewController {
         //get user location 
         let user = CurrentUser.init()
         
-            user.userAttributes { (Developer) in
-                
-                if let userCordinates = Developer.userLocation {
-                    self.currentUSerLocation = userCordinates
-                    self.currentJobPostings()
-                }
-                
+        user.userAttributesSingleEvent { (Developer) in
+            if let userCordinates = Developer.userLocation {
+                self.currentUSerLocation = userCordinates
+                self.currentJobPostings()
             }
-        
-        
-        
+
+        }
   
     }
 

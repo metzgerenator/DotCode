@@ -522,6 +522,34 @@ struct CurrentUser  {
         })
         
     }
+    
+    //observe single user value
+    
+    
+    func userAttributesSingleEvent(completion: @escaping (Developer) -> Void) {
+        
+        guard let userId = FIRAuth.auth()?.currentUser?.uid else {return}
+        
+        let ref = FIRDatabase.database().reference().child("users").child(userId)
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let skillDic = snapshot.value as? NSDictionary else { return }
+            
+            
+            let developer = Developer(userdata: skillDic as! [String : AnyObject])
+            
+            completion(developer)
+            
+        }) { (Error) in
+            
+            print("error occured \(Error.localizedDescription)")
+            
+        }
+       
+        
+    }
+    
    
     func checkUSerStatus(completion: @escaping (_ userLogged: Bool)->Void)  {
         
