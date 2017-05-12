@@ -18,9 +18,11 @@ class JobSearchTableViewCell: UITableViewCell {
     @IBOutlet var numberOfDaysAgo: UILabel!
     
     
+     var currentJob: Job?
+    
     @IBOutlet var isFaveroite: UIButton!
     
-    var currentJob: Job?
+   
     
     @IBAction func isFavAction(_ sender: Any) {
         
@@ -28,10 +30,11 @@ class JobSearchTableViewCell: UITableViewCell {
             
             let jobKey = selectedJob.jobKey
             
-            let jobToSave = ["job_Key" :  jobKey]
-            
-            appendCustomHeader(child: "Saved Jobs", values: jobToSave as Dictionary<String, AnyObject>)
-          isFaveroite.backgroundColor = .red
+            let jobToSave = ["job_Key": jobKey]
+  
+            appendCustomHeaderWithAutoID(child: "Saved Jobs", values: jobToSave as Dictionary<String, AnyObject>)
+
+            isFaveroite.backgroundColor = .red
             
         }
         

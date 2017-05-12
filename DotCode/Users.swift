@@ -389,10 +389,23 @@ func appendCustomHeader(child: String, values: Dictionary<String, AnyObject>) {
         
     }
     
+    
 }
 
 
-//MARK: add a new job POST 
+func appendCustomHeaderWithAutoID(child: String, values: Dictionary<String, AnyObject>) {
+    
+    if let user = FIRAuth.auth()?.currentUser {
+        
+        let ref = FIRDatabase.database().reference().child("users").child(user.uid).child(child).childByAutoId()
+        ref.updateChildValues(values)
+        
+    }
+    
+}
+
+
+//MARK: add a new job POST
 
 func postAJob(values: Dictionary<String, AnyObject>) {
     
