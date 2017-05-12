@@ -18,6 +18,26 @@ class JobSearchTableViewCell: UITableViewCell {
     @IBOutlet var numberOfDaysAgo: UILabel!
     
     
+    @IBOutlet var isFaveroite: UIButton!
+    
+    var currentJob: Job?
+    
+    @IBAction func isFavAction(_ sender: Any) {
+        
+        if let selectedJob = currentJob {
+            
+            let jobKey = selectedJob.jobKey
+            
+            let jobToSave = ["job_Key" :  jobKey]
+            
+            appendCustomHeader(child: "Saved Jobs", values: jobToSave as Dictionary<String, AnyObject>)
+          isFaveroite.backgroundColor = .red
+            
+        }
+        
+        
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,12 +52,13 @@ class JobSearchTableViewCell: UITableViewCell {
     
     func configureCell(job: Job) {
         
+        currentJob = job
         
         descriptionLabel.text = job.description ?? "none"
         //add studio name
+    
        studioNameLabel.text = "none"
-        
-        
+
         if let postDate = job.postDate {
             
             numberOfDaysAgo.text = dateNumberCreator(postDate: postDate)

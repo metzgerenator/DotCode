@@ -23,8 +23,7 @@ class NameListingViewController: UIViewController {
             //append name of job
             addProjectDelegate?.appendToProject(key: JOBPOSTNAME, value: projectNameOutlet.text!)
             addProjectDelegate?.appendToProject(key: JOBPOSTDATE, value: "\(Date().timeIntervalSince1970)")
-            
-            
+  
             self.saveProjectDelegate?.postJob()
             self.dismiss(animated: true, completion: nil)
         }
@@ -41,6 +40,12 @@ class NameListingViewController: UIViewController {
                 
                 self.addProjectDelegate?.appendToProject(key: USERLONGITUDE, value: "\(long)")
                 self.addProjectDelegate?.appendToProject(key: USERLATITUED, value: "\(lat)")
+                
+            }
+            
+            if let userCompany = user.companyName {
+                
+                self.addProjectDelegate?.appendToProject(key: COMPANYNAME, value: userCompany)
                 
             }
             

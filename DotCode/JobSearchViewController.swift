@@ -15,9 +15,6 @@ class JobSearchViewController: UIViewController {
     var currentUSerLocation: CLLocation?
     //filter options 
     
-    
-    
-    
     @IBOutlet var jobNumber: UILabel!
     
     // filter controls on
@@ -78,13 +75,18 @@ class JobSearchViewController: UIViewController {
         
         //get user location 
         let user = CurrentUser.init()
-        user.userAttributes { (Developer) in
-            guard let userCordinates = Developer.userLocation else {return}
-            
-            self.currentUSerLocation = userCordinates
-            self.currentJobPostings()
-            
-        }
+        
+            user.userAttributes { (Developer) in
+                
+                if let userCordinates = Developer.userLocation {
+                    self.currentUSerLocation = userCordinates
+                    self.currentJobPostings()
+                }
+                
+            }
+        
+        
+        
   
     }
 

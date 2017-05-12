@@ -250,6 +250,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWc-Dd-5L3">
                                                             <rect key="frame" x="329" y="0.0" width="30" height="30"/>
                                                             <state key="normal" title="Fav"/>
+                                                            <connections>
+                                                                <action selector="isFavAction:" destination="ogw-vI-XWu" eventType="touchUpInside" id="gPS-fT-kMU"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -263,6 +266,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="JVK-fF-tev" id="B8P-DM-Zza"/>
+                                            <outlet property="isFaveroite" destination="oWc-Dd-5L3" id="Jfq-cT-1gn"/>
                                             <outlet property="numberOfDaysAgo" destination="8aI-r2-eVu" id="4VY-48-wfD"/>
                                             <outlet property="studioNameLabel" destination="I3l-sg-Pcm" id="eLC-ji-GdQ"/>
                                         </connections>

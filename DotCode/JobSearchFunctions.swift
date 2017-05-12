@@ -24,6 +24,8 @@ struct Job {
     var companySize: String?
     //add latitude and longitude 
     
+    var companyName: String?
+    
     var longitude: String?
     var latitude: String?
     
@@ -74,6 +76,12 @@ extension JobSearchViewController {
                     
                     
                 
+                }
+                
+                if let companyName = subJson[COMPANYNAME].string {
+                    
+                    job.companyName = companyName
+                    
                 }
                 
                 
