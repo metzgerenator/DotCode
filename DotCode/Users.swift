@@ -155,12 +155,9 @@ struct Developer {
                     
                     jobKeys.append(jobKey as! String)
                 }
-                
-                
-                
             }
             
-            
+            self.savedJobKeys = jobKeys
             
         }
         
