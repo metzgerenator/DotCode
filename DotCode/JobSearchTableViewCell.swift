@@ -30,9 +30,9 @@ class JobSearchTableViewCell: UITableViewCell {
             
             let jobKey = selectedJob.jobKey
             
-            let jobToSave = ["job_Key": jobKey]
+            let jobToSave = [JOBKEY: jobKey]
   
-            appendCustomHeaderWithAutoID(child: "Saved Jobs", values: jobToSave as Dictionary<String, AnyObject>)
+            appendCustomHeaderWithAutoID(child: SAVEDJOBS, values: jobToSave as Dictionary<String, AnyObject>)
 
             isFaveroite.backgroundColor = .red
             
@@ -60,7 +60,7 @@ class JobSearchTableViewCell: UITableViewCell {
         descriptionLabel.text = job.description ?? "none"
         //add studio name
     
-       studioNameLabel.text = "none"
+       studioNameLabel.text = job.companyName ??  "none"
 
         if let postDate = job.postDate {
             

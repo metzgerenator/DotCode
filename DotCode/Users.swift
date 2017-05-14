@@ -107,6 +107,8 @@ struct Developer {
     
     var userLocation: CLLocation?
     
+    var savedJobKeys: [String]?
+    
     
     init() {
         
@@ -141,6 +143,29 @@ struct Developer {
         
         
         
+        //job key array 
+        
+        if let savedJobs = userdata[SAVEDJOBS] {
+            
+            var jobKeys = [String]()
+ 
+            for (_, jobDict) in savedJobs as! Dictionary<String, Any> {
+                
+                for (_, jobKey) in jobDict as! Dictionary<String,Any> {
+                    
+                    jobKeys.append(jobKey as! String)
+                }
+                
+                
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
         if let completedProfile = userdata[COMPLETEPROFILE] {
             
             guard let completed = completedProfile as? String else {return}
@@ -155,7 +180,6 @@ struct Developer {
         }
         
         if let longitude = userdata[USERLONGITUDE], let latitude = userdata[USERLATITUED]{
-            print("here's longituded \(longitude), here's latitude \(latitude)")
             
             guard let lat = latitude as? NSNumber else {return}
             guard let lon = longitude as? NSNumber else {return}

@@ -41,6 +41,13 @@ let PROJECTURLS = "URLS"
 let DEVELOPERSKILLS = "developer_skills"
 
 
+// Saved Jobs 
+let JOBKEY = "job_Key"
+let SAVEDJOBS = "Saved Jobs"
+
+
+
+
 //Client types
 let Entrepeneur = "Entrepreneur"
 let Company  = "Company"
