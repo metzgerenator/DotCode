@@ -153,13 +153,7 @@ struct Developer {
                 
                 jobKeys.updateValue(jobDict, forKey: keyForDic)
                 
-//                for (key, jobKey) in jobDict as! Dictionary<String,Any> {
-//                    
-//                    
-//                    
-//                    jobKeys.updateValue(jobKey, forKey: key)
-//                    
-//                }
+
             }
             
             self.savedJobKeys = jobKeys
@@ -405,12 +399,27 @@ func appendDevSkils(values: Dictionary<String, AnyObject>) {
 }
 
 
+func removeJobValue(child: String, rootKey: String) {
+    
+    if let user = FIRAuth.auth()?.currentUser {
+        
+        
+        let ref = FIRDatabase.database().reference().child("users").child(user.uid).child(child).child(rootKey)
+        
+        
+        ref.removeValue()
+        
+    }
+    
+}
+
 func appendCustomHeader(child: String, values: Dictionary<String, AnyObject>) {
     
     if let user = FIRAuth.auth()?.currentUser {
         
         
         let ref = FIRDatabase.database().reference().child("users").child(user.uid).child(child)
+        
         ref.updateChildValues(values)
         
     }

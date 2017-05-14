@@ -28,16 +28,31 @@ class JobSearchTableViewCell: UITableViewCell {
     
     @IBAction func isFavAction(_ sender: Any) {
         
-        //need to add removal check
         if let selectedJob = currentJob {
             
             let jobKey = selectedJob.jobKey
             
             let jobToSave = [JOBKEY: jobKey]
-  
-            appendCustomHeaderWithAutoID(child: SAVEDJOBS, values: jobToSave as Dictionary<String, AnyObject>)
-
-            isFaveroite.backgroundColor = .red
+            
+            if isFaveroite.backgroundColor == .red {
+                
+                isFaveroite.backgroundColor = .none
+                
+                //remove job
+                
+                removeJob(job: selectedJob)
+                
+         
+            } else {
+                //addjob
+                appendCustomHeaderWithAutoID(child: SAVEDJOBS, values: jobToSave as Dictionary<String, AnyObject>)
+                
+                isFaveroite.backgroundColor = .red
+                
+            }
+            
+            
+           
             
         }
         
@@ -101,6 +116,7 @@ class JobSearchTableViewCell: UITableViewCell {
                     
                 }
                 
+                
             }
             
             
@@ -111,7 +127,25 @@ class JobSearchTableViewCell: UITableViewCell {
         }
         
     
-    
+    func removeJob(job: Job) {
+        
+        for (rootKey, savedDict) in self.currentUSerKeys {
+            
+            for (_, savedKey) in savedDict as! Dictionary<String,Any> {
+                
+                if savedKey as? String == job.jobKey {
+                    
+                    //delete here
+                    removeJobValue(child: SAVEDJOBS, rootKey: rootKey)
+                }
+                
+                
+            }
+            
+            
+        }
+        
+    }
     
     
     func dateNumberCreator(postDate: String) -> String {
