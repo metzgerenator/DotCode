@@ -10,7 +10,7 @@ import UIKit
 
 class JobSearchTableViewCell: UITableViewCell {
     
-    var currentUSerKeys = [String]()
+    var currentUSerKeys = Dictionary<String, Any>()
     
     
     @IBOutlet var descriptionLabel: UILabel!
@@ -56,9 +56,10 @@ class JobSearchTableViewCell: UITableViewCell {
     }
     
     
-    func configureCell(job: Job, userKeys: [String]) {
+    func configureCell(job: Job, userKeys: Dictionary<String, Any>) {
         
         self.currentUSerKeys = userKeys
+        
         
         currentJob = job
         
@@ -88,9 +89,28 @@ class JobSearchTableViewCell: UITableViewCell {
     
     func isJobKeyPresent(job: Job) -> Bool {
         
-       return self.currentUSerKeys.contains{$0 == job.jobKey}
+        var isPresent = false
         
-    }
+        for (_, savedDict) in self.currentUSerKeys {
+            
+            for (_, savedKey) in savedDict as! Dictionary<String,Any> {
+                
+                if savedKey as? String == job.jobKey {
+                    
+                    isPresent = true
+                    
+                }
+                
+            }
+            
+            
+        }
+        
+        return isPresent
+        
+        }
+        
+    
     
     
     

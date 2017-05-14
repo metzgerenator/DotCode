@@ -12,7 +12,7 @@ import CoreLocation
 class JobSearchViewController: UIViewController {
     
     var allJobs = [Job]()
-    var userSavedJobs = [String]()
+    var userSavedJobs = Dictionary<String, Any>()
     var currentUSerLocation: CLLocation?
     //filter options 
     

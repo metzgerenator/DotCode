@@ -107,7 +107,7 @@ struct Developer {
     
     var userLocation: CLLocation?
     
-    var savedJobKeys: [String]?
+    var savedJobKeys: Dictionary<String, Any>?
     
     
     init() {
@@ -147,14 +147,19 @@ struct Developer {
         
         if let savedJobs = userdata[SAVEDJOBS] {
             
-            var jobKeys = [String]()
+            var jobKeys = Dictionary<String, Any>()
  
-            for (_, jobDict) in savedJobs as! Dictionary<String, Any> {
+            for (keyForDic, jobDict) in savedJobs as! Dictionary<String, Any> {
                 
-                for (_, jobKey) in jobDict as! Dictionary<String,Any> {
-                    
-                    jobKeys.append(jobKey as! String)
-                }
+                jobKeys.updateValue(jobDict, forKey: keyForDic)
+                
+//                for (key, jobKey) in jobDict as! Dictionary<String,Any> {
+//                    
+//                    
+//                    
+//                    jobKeys.updateValue(jobKey, forKey: key)
+//                    
+//                }
             }
             
             self.savedJobKeys = jobKeys
