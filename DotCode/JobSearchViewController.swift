@@ -12,6 +12,7 @@ import CoreLocation
 class JobSearchViewController: UIViewController {
     
     var allJobs = [Job]()
+    var userSavedJobs = [String]()
     var currentUSerLocation: CLLocation?
     //filter options 
     
@@ -80,7 +81,7 @@ class JobSearchViewController: UIViewController {
         user.userAttributes { (Developer) in
             if let savedJobKeys = Developer.savedJobKeys {
                 
-                
+                self.userSavedJobs = savedJobKeys
             }
         }
         
@@ -120,7 +121,7 @@ extension JobSearchViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as! JobSearchTableViewCell
         
         let currentJob = allJobs[indexPath.row]
-        cell.configureCell(job: currentJob)
+        cell.configureCell(job: currentJob, userKeys: self.userSavedJobs)
         
         return cell
     }

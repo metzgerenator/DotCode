@@ -10,6 +10,8 @@ import UIKit
 
 class JobSearchTableViewCell: UITableViewCell {
     
+    var currentUSerKeys = [String]()
+    
     
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -26,6 +28,7 @@ class JobSearchTableViewCell: UITableViewCell {
     
     @IBAction func isFavAction(_ sender: Any) {
         
+        //need to add removal check
         if let selectedJob = currentJob {
             
             let jobKey = selectedJob.jobKey
@@ -53,9 +56,19 @@ class JobSearchTableViewCell: UITableViewCell {
     }
     
     
-    func configureCell(job: Job) {
+    func configureCell(job: Job, userKeys: [String]) {
+        
+        self.currentUSerKeys = userKeys
         
         currentJob = job
+        
+        let keyCheck = isJobKeyPresent(job: job)
+        
+        if (keyCheck) {
+            isFaveroite.backgroundColor = .red
+        } else {
+            isFaveroite.backgroundColor = .none
+        }
         
         descriptionLabel.text = job.description ?? "none"
         //add studio name
@@ -69,8 +82,13 @@ class JobSearchTableViewCell: UITableViewCell {
             
             numberOfDaysAgo.text = "none"
         }
+  
+    }
+    
+    
+    func isJobKeyPresent(job: Job) -> Bool {
         
-        
+       return self.currentUSerKeys.contains{$0 == job.jobKey}
         
     }
     
